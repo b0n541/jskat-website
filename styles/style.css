@@ -1,0 +1,179 @@
+body {
+	background-color:	#C9D9E5;
+	
+	font-family:	Verdana, sans-serif;
+	font-size:		10pt;
+	line-height:	120%;
+
+	text-align:		justify;
+	vertical-align:	top;
+}
+
+table {
+	font-family:	Verdana, sans-serif;
+	font-size:		10pt;
+	line-height:	120%;
+
+	margin-top:		0px;
+	margin-bottom:	6px;
+}
+
+h1 {
+	margin-top:		0px;
+	margin-bottom:	0px;
+	
+	font-size:		20pt;
+	line-height:	120%;
+	
+	text-align:		left;
+	
+	color:			#445766;
+}
+
+h2 {
+	margin-top:		0px;
+	margin-bottom:	0px;
+	
+	font-size:		12pt;
+	line-height:	120%;
+	
+	text-align:		left;
+	
+	color:			#445766;
+}
+
+h3 {
+	margin-top:		12px;
+	margin-bottom:	6px;
+	
+	font-size:		12pt;
+	font-weight:	bold;
+	line-height:	120%;
+	
+	text-align:		left;
+	
+	color:			#445766;
+}
+
+p {
+	margin-top:		0px;
+	margin-bottom:	6px;
+}
+
+li {
+	margin-bottom:  6px;
+}
+
+img {
+	margin-top:		18px;
+	margin-bottom:	18px;
+}
+
+a img {
+	border:				none;
+	text-decoration:	none;
+}
+
+a:link {
+	color:			#eeeeee;
+}
+
+div * a:link {
+	color:			#000000;
+}
+
+a:visited {
+	color:			#cccccc;
+}
+
+div * a:visited {
+	color:			#555555;
+}
+
+a:hover {
+	color:			#cb890e;
+}
+
+div * a:hover {
+	color:			#cb890e;
+}
+
+a:active {
+	color:			#cb890e;
+}
+
+div * a:active {
+	color:			#cb890e;
+}
+
+a:focus {
+	color:			#cb890e;
+}
+
+div * a:focus {
+	color:			#cb890e;
+}
+
+.center {
+	text-align:		center;
+}
+
+.top {
+	vertical-align:	top;
+}
+
+.firsth3 {
+	margin-top:     0px;
+}
+
+.tt {
+	margin-top:		18px;
+	margin-bottom:	18px;
+}
+
+.headline {
+	position:		absolute;
+	top:			30px;
+	left:			30px;
+	
+	padding:		5px;
+	
+	background-color:	#99B6CC;
+	border-color:		#6e7c8b;
+	border-width:		2px;
+	border-style:		solid;
+}
+
+.menue {
+	position:		absolute;
+	top:			110px;
+	left:			30px;
+	width:			700px;
+	
+	padding:		5px;
+	
+	background-color:	#445766;
+	border-color:		#445766;
+	border-width:		1px;
+	border-style:		solid;
+
+	color:				#eeeeee;
+}
+
+.content {
+	position:		absolute;
+	top:			150px;
+	left:			30px;
+	width:			700px;
+	
+	padding:		15px;
+	
+	background-color:	#eeeeee;
+	border-color:		#445766;
+	border-width:		1px;
+	border-style:		solid;
+	
+	z-index:			2;
+}
+
+

@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Specification for the Options Dialog</title>
+<LINK REL ="stylesheet" TYPE="text/css" HREF="styles/stylesheet.css" TITLE="Style">
+</head>
+<body>
+<p>
+<a href="index.html">Back to the overview</a>
+</p>
+<h1>General Requirements</h1>
+<p>The options dialog is available
+<ul>
+<li>when starting a new skat round (opens up automatically),</li>
+<li>when selecting "Game - Options" from the menu or</li>
+<li>by pushing the options button in the menu bar.</li>
+</ul>
+</p>
+
+<p>When starting a new skat round, all options can be modified according to the user's choice. While a skat round is running, only a smaller subset of the options is available for change, as is stated in the individual panels.</p>
+
+<h1>Options</h1>
+
+<h2>Panel 1: Game <font class="comment">(formerly titled "Players")</font></h2>
+
+<p class="comment">The panel's title should be changed from "Players" / "Spieler" to "Game" / "Spiel".</p>
+
+<p>In this panel, the players for the skat game are defined. Each player has a name and a certain player type. For the first two players only AI players can be selected. The third player can either be a human player or another AI player.</p>
+<p class="comment">As a future option, "remote" might be available as the player type, which means that another human player can participate over a TCP/IP connection.</p>
+
+<img src="img/player.png">
+
+<p>At the start of a skat round, all options can be changed. <font class="new">During a skat round, only the player names should be subject to change, but not the player types (as some future AI players might build on the behaviour of the other players).</font></p>
+
+<p class="comment">Why not the player types? You could say: "Hmm, I'm too bad now and have to go for a drink, let the computer player take over and let's see if it can win this skat round. ;o) But maybe it's too hard for a computer player to take over, because of its internal statistics it produces during a skat round… <font class="recomment">Exactly...</font></p>
+
+<h2>Panel 2: Rules</h2>
+
+<p>In the rules section of the options dialog, the basic rules can be set for the game.</p>
+
+<p>In version 0.3, this dialog is not really available, as depicted in the screenshot below:</p>
+
+<img src="img/rules.png">
+
+<p>Playing by the official rules disables all individual rules. <font class="new">Cheat/debug mode, however, can still be selected in the debug section.</font></p>
+
+<p class="new">When playing by individual rules, the following options can be selected:</p>
+
+<ul class="new">
+<li>allow Contra/Re</li>
+<li>play Ramsch on passed in games</li>
+<li>play Bock/Ramsch rounds on
+<ul>
+	<li>lost games</li>
+	<li>lost Contra games (is checked automatically if "all Contra games" is checked)</li>
+	<li>all Contra games (is unchecked automatically if "lost Contra games" is unchecked)</li>
+	<li>passed in games</li>
+	<li>Schwarz games</li>
+</ul></li>
+<li>Ramsch games in Bock round counted twice</li>
+<li>number of Jacks allowed in Ramsch skat: 0 / 1 / 2</li>
+<li>allow Revolution game (counts for 96)</li>
+</ul>
+
+<p class="new">There is also a "set default" button in this panel, which sets some standard rules for individual games:</p>
+<ul class="new">
+<li>Contra/Re is allowed</li>
+<li>Playing Ramsch on passed in games</li>
+<li>Bock/Ramsch rounds after all Contra games</li>
+<li>number of Jacks in Ramsch skat is 0</li>
+<li>Revolution is allowed</li>
+</ul>
+
+<p class="new">The ruleset cannot be changed while a skat round is running.</p>
+ 
+<h2 class="new">Panel 3: General</h2>
+
+<p class="recomment">This is a new tab for version 0.4 called "General" / "Allgemeines".</p>
+<p class="new">This section offers all the general settings, which do not have an immediate effect on how the game is played.</p>
+
+<p class="new">In a text box, the number of rounds to be played in the skat round can be defined. The default value is "12".<br />
+The number of rounds can be changed during the game. However, the number cannot be set to a value lower than the current count of rounds.</p>
+
+<p class="new">In addition, by checking the "unlimited" box behind the field, the number in the text box becomes inactivated (but the value is kept) and an unlimited number of skat rounds is played.</p>
+
+<p class="new">For user convenience, the delay time after the individual tricks can be set in seconds (in a range from 0 to 60). Alternatively, the user can use a check box to wait for an explicit click after each trick. This option can be changed at any time while the game is in progress.</p>
+
+<p class="new">The language is also selectable in this section by using a drop down box.</p>
+
+<p class="new">The user can also define, whether every game has to be played until the last trick or if a game can be shortcut if one player gets all cards left on the hands of all players. <font class="recomment">(planned for release 0.5 or later)</font></p>
+
+<p class="new">Some path definitions for saving the options and the skat lists should be available on the general tab.<font class="recomment"><br />(saving games is currently planned for release 0.5 or later)</font></p>
+
+<h2>Panel 4: Cheat/debug mode</h2>
+
+<p>The final panel gives some cheat and debug features. The options in this panel are only available when cheat mode is allowed in the general options.</p>
+
+<img src="img/debug.png">
+
+<p>The following cheat options are available:</p>
+
+<ul>
+<li>Show all cards (also means that the flip button in the menu bar is visible/activated)</font></li>
+<li class="new">Show all previous tricks.</li>
+<li class="new">Definition of the distribution of the cards</li>
+</ul>
+
+<h1>Interactions</h1>
+
+<p>Some options interact with gameplay in a non-obvious way. These interactions are defined in this section.</p>
+
+<h2>Last Tricks Dialog</h2>
+
+<p>This dialog is supposed to show all tricks that have been played in the current game. Its function depends on the option set in Panel 4. In the "regular" mode (i.e. official rules) the button is only enabled, as long the player doesn't have played a card in the current trick (according to the official skat rules). Furthermore, it then only shows the very last trick, instead of the complete trick history.</p>
+
+<p>Only when JSkat is in cheat/debug mode and the corresponding option is checked, all previous tricks from the current game are available.</p>
+
+<p>
+<a href="index.html">Back to the overview</a>
+</p>
+
+</body>
+</html>
