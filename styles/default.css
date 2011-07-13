@@ -155,12 +155,21 @@ h1,h2,h3 {
 	background: #CCC3AF;
 	color: #554;
 	display: block;
-	padding: 8px 4px 8px 12px;
+	padding: 8px 12px 8px 12px;
+	text-decoration: none;
+}
+.sidenav li a img {
+	background: #CCC3AF;
+	color: #554;
+	display: inline-block;
 	text-decoration: none;
 }
 .sidenav li a:hover {
 	background: #D6CCB9;
 	color: #654;
+}
+.textmiddle {
+	vertical-align:middle;
 }
 
 /* content */
