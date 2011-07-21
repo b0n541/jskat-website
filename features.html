@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
-<meta name="description" content="JSkat is a free implementation of the German card game Skat in Java"/>
-<meta name="keywords" content="skat freeware java windows linux mac os"/> 
-<meta name="author" content="author"/> 
-<link rel="stylesheet" type="text/css" href="styles/default.css" media="screen"/>
-<title>JSkat</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="description" content="JSkat is a free implementation of the German card game Skat in Java"/>
+	<meta name="keywords" lang="de" content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, GPL, GNU General Public License, Freie Software, Open Source, Windows, Linux, Mac OS, Funktionen">
+	<meta name="keywords" lang="en" content="JSkat, Skat, artificial intelligenz, neural networks, Java, GPL, GNU General Public License, free software, open source, Windows, Linux, Mac OS, features">
+	<meta name="author" content="Jan Schäfer"/> 
+	<link rel="stylesheet" type="text/css" href="styles/default.css" media="screen"/>
+	<title>JSkat</title>
 </head>
 
 <body>
@@ -17,12 +18,17 @@
 	<div class="header">
 				
 		<div class="title">
-		<table><tr><td>			
-			<img src="img/jskat_logo.png" alt="JSkat logo" title="JSkat logo"/>
-		</td><td>			
-			<h1>JSkat</h1>
-			<p class="descr">It's free and it's written in Java<sup>TM</sup></p>
-		</td></tr></table>
+		<table>
+			<tr>
+				<td>			
+				<img src="img/jskat_logo.png" alt="JSkat logo" title="JSkat logo"/>
+				</td>
+				<td>			
+				<h1>JSkat</h1>
+				<p class="descr">It's free and it's written in Java<sup>TM</sup></p>
+				</td>
+			</tr>
+		</table>
 		</div>
 
 	</div>
@@ -48,8 +54,8 @@
 	
 			<ul>
 			<li>Playing according to the official rules of the <a href="http://www.ispaworld.org">International Skat Players Association (ISPA-World)</a></li>
-			<li>Play suit, grand and null games.</li>
-			<li>Games are passed in if no player bids.</li>
+			<li>Play suit, grand and null games</li>
+			<li>Games are passed in if no player bids</li>
 			<li>Playing pub rules like Kontra, Ramsch and Bock (planned)</li>
 			<li>Calculation of wins and losses after each game</li>
 			</ul>
@@ -58,35 +64,37 @@
 
 			<p>For the time being, there are three AI Skat players available for JSkat:</p>
 				<ul>
-				<li><b>AIPlayerMJL</b><br />
+				<li><b>Algorithmic</b><br />
 				A player with careful bidding, a basic opponent intelligence and 
-				currently no single player AI.
+				single player AI.
 				</li>
-				<li><b>AIPlayerJS</b><br />
-				A player that doesn't do bidding very well and that's 
-				why it's losing most of the time.
+				<li><b>Neuronal network</b><br />
+				A player that uses neural networks for calculating it's strategy.
 				</li>
-				<li><b>AIPlayerRND</b><br />
+				<li><b>Mr. Random</b><br />
 				A random player only for testing and driving the other players nuts. ;o)
 				</li>
 				</ul>
-
-			<p>We'll release an interface definition that will allow you to
-			create and integrate your own AI&nbsp;player into JSkat. (planned)
+			
+			<p>
+			There is an interface for AI players. If you would like to develop
+			your own AI player, all you have to do is to implement this interface,
+			to integrate your player into JSkat. We would appreciate to welcome
+			new developers in our team.
 			</p>
 
 			<h2>Cheat/Debug mode</h2>
 	
 			<ul>
-			<li>Look into the cards of the other skat players.</li>
-			<li>Go through all tricks that were played.</li>
-			<li>Watch three AI players against themselves.</li>
+			<li>Look into the cards of the other skat players</li>
+			<li>Go through all tricks after die end of a game</li>
+			<li>Watch three AI players against themselves</li>
 			</ul>
 
 			<h2>Other features</h2>
 	
 			<ul>			
-			<li>Saving data in XML (planned)</li>
+			<li>Saving data in XML files (planned)</li>
 			<li>
 			Multilanguage support<br />
 			Currently we support German and English. If you want to contribute a translation, 
@@ -97,11 +105,15 @@
 		</div>
 
 		<div class="sidenav">
-
+			<ul>
+				<li><a href="features_de.html"><img class="textmiddle" src="img/german.png" alt="Deutsch" title="Deutsch" />&nbsp;Deutsche Version</a></li>
+				<li><a href="features.html"><img class="textmiddle" src="img/english.png" alt="English" title="English" />&nbsp;English version</a></li>
+			</ul>
 			<h1>Project links</h1>
 			<ul>
-				<li><a href="http://sourceforge.net/projects/jskat/files/jskat/0.7/JSkat-0.7.0-jar-with-dependencies.jar/download">Get JSkat 0.7</a></li>
-				<li><a href="http://packman.links2linux.org/package/JSkat">Get Packman package</a></li>
+				<li><a href="http://sourceforge.net/projects/jskat/files/jskat/0.8/JSkat-0.8.0-jar-with-dependencies.jar/download">Get JSkat 0.8</a></li>
+				<li><a href="http://packman-test.links2linux.de/package/JSkat">Packman RPM</a></li>
+				<li><a href="http://aur.archlinux.org/packages.php?ID=34522&detail=1">Arch-Linux PKGBUILD</a></li>
 				<li><a href="https://sourceforge.net/apps/trac/jskat/report/1">Bugtracking</a></li>
 			</ul>
 
@@ -118,7 +130,7 @@
 	</div>
 
 	<div class="footer">
-		&copy;&nbsp;2011 <a href="index.html">www.jskat.org</a>. Valid <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>. Template design by <a href="http://templates.arcsin.se">Arcsin</a>
+		&copy;&nbsp;2011 <a href="index.html">www.jskat.org</a>. Valid <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>. Template design by <a href="http://templates.arcsin.se">Arcsin</a>. Flag icons by <a href="http://commons.wikimedia.org/">Wikimedia Commons</a>
 	</div>
 
 </div>
