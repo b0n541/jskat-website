@@ -52,41 +52,31 @@
 			Wenn Sie Interesse haben, selbst einmal eine Skat-KI zu 
 			implementieren, so ist der Start mit JSkat sehr einfach. Die 
 			folgende sechs Schritte sind beispielhaft für die IDE Eclipse
-			mit dem Plugin Subclipse dargestellt.
+			mit den Plugins EGit und m2eclipse dargestellt.
 			</p>
 			
-			<h2>Schritt 1: SVN-Repository einrichten</h2>
+			<h2>Schritt 1: Git-Repository einrichten</h2>
 			
 			<p>
-			Über das Menü "Window - Show View - SVN Repositories" können Sie
+			Über das Menü "Window - Show View - Git Repositories" können Sie
 			die Sicht auf Repositorys mit dem Versionsverwaltungssystem 
-			Subversion (SVN) aktivieren. Fügen Sie ein neues Repository hinzu 
-			und geben Sie als URL
+			Git aktivieren. Klonen Sie das JSkat-Repository indem Sie als URL
 			</p>
 
 			<p class="code">
 				<tt>
-				https://jskat.svn.sourceforge.net/svnroot/jskat
+				https://github.com/b0n541/jskat-multimodule.git
 				</tt>
 			</p>
 			
-			<p>ein.</p>
+			<p>eingeben.</p>
 
-			<h2> Schritt 2: JSkat auschecken</h2>
+			<h2> Schritt 2: JSkat als Projekt einrichten</h2>
 
 			<p>
-			Klappen Sie im Repository erst jskat und dann trunk auf. Darunter 
-			sollten dann Verzeichnisse wie lib und src auftauchen und Dateien
-			wie pom.xml. Jetzt können Sie mit der rechten Maustaste auf trunk 
-			klicken und "Checkout..." auswählen und im nächsten Dialog mit der 
-			ersten Option "Check out as a project using the New Project Wizard" 
-			das Auschecken starten.
-			</p>
-			
-			<p>
-			Als erstes wählen Sie im Wizard den Projekttyp "Java Project". 
-			Im nächsten Dialog vergeben Sie einen Namen für das Projekt und 
-			schließen das Auschecken ab.
+			Klappen Sie das geklonte Repository auf. Jetzt können Sie mit der 
+			rechten Maustaste auf "Working directory" klicken und "Import projects..." 
+			auswählen.
 			</p>
 
 			<h2>Schritt 3: Maven aktivieren</h2>
@@ -97,8 +87,24 @@
 			sollte jetzt alle benötigten Bibliotheken herunterladen und das 
 			Projekt für die Entwicklung einrichten.
 			</p>
+			
+			<p>
+			Durch Klicken mit der rechten Maustaste auf die Wurzel des Multi-Moduls
+			und auswählen von "Import..." und danach "Existing Maven Projects" können 
+			die Sub-Module des Multi-Moduls als eigene Projekte im Eclipse importiert 
+			werden. Eine Aktivierung der Sub-Module als Maven-Projekte führt auch hier
+			zum Herunterladen aller benötigten Fremd-Bibliotheken.
+			</p>
 
 			<h2>Schritt 4: Projektstruktur</h2>
+
+			<p>
+			JSkat ist in zwei Module aufgeteilt. Im Modul jskat-base
+			liegen die allgemeinen Klassen, die sowohl von JSkat als auch
+			von JSkat on Android genutzt werden. Hier liegen auch die 
+			Klassen der KI-Spieler. Das Modul JSkat enthält alle Klassen für
+			die Swing-GUI von JSkat.
+			</p>
 
 			<p>
 			Es gibt vier Verzeichnisse für Quellcode:
