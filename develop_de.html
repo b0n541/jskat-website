@@ -212,7 +212,21 @@ case MY_SKAT_AI_PLAYER:
 
 			<p>
 			Klicken Sie mit der rechten Maustaste auf die Klasse org.jskat.JSkat
-			und wählen Sie "Run as - Java Application" aus.
+			und wählen Sie "Run as - Java Application" aus. Die Fehlermeldung auf der 
+			Konsole, dass kein Splashscreen gefunden wurde, kann mit dem VM-Parameter
+			</p>
+
+			<p class="code">
+				<tt>
+					<pre>
+-splash:src/main/resources/org/jskat/gui/img/gui/splash.png					
+					</pre>
+				</tt>
+			</p>
+			
+			<p>
+			behoben werden.
+			</p>
 
 			<h2>Bonus: Mit offenen Karten spielen</h2>
 
