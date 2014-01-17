@@ -2,293 +2,285 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<meta name="description" content="JSkat is a free implementation of the German card game Skat in Java"/>
-	<meta name="keywords" lang="de" content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, GPL, GNU General Public License, Freie Software, Open Source, Windows, Linux, Mac OS, Download">
-	<meta name="keywords" lang="en" content="JSkat, Skat, artificial intelligenz, neural networks, Java, GPL, GNU General Public License, free software, open source, Windows, Linux, Mac OS, downloand">
-	<meta name="author" content="Jan Schäfer"/> 
-	<link rel="stylesheet" type="text/css" href="styles/default.css" media="screen"/>
-	<title>JSkat</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description"
+	content="JSkat is a free implementation of the German card game Skat in Java" />
+<meta name="keywords" lang="de"
+	content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, GPL, GNU General Public License, Freie Software, Open Source, Windows, Linux, Mac OS, Download">
+	<meta name="keywords" lang="en"
+		content="JSkat, Skat, artificial intelligenz, neural networks, Java, GPL, GNU General Public License, free software, open source, Windows, Linux, Mac OS, downloand">
+		<meta name="author" content="Jan Schäfer" />
+		<link rel="stylesheet" type="text/css" href="styles/default.css"
+			media="screen" />
+		<title>JSkat</title>
 </head>
 
 <body>
 
-<div class="container">
+	<a href="https://github.com/b0n541/jskat-multimodule"><img
+		style="position: absolute; top: 0; right: 0; border: 0;"
+		src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+		alt="Fork me on GitHub"></a>
 
-	<div class="header">
-				
-		<div class="title">
-		<table>
-			<tr>
-				<td>			
-				<img src="img/jskat_logo.png" alt="JSkat logo" title="JSkat logo"/>
-				</td>
-				<td>			
-				<h1>JSkat</h1>
-				<p class="descr">Eine freie Software, geschrieben in Java<sup>TM</sup></p>
-				</td>
-			</tr>
-		</table>
+	<div class="container">
+
+		<div class="header">
+
+			<div class="title">
+				<table>
+					<tr>
+						<td><img src="img/jskat_logo.png" alt="JSkat logo"
+							title="JSkat logo" /></td>
+						<td>
+							<h1>JSkat</h1>
+							<p class="descr">
+								Eine freie Software, geschrieben in Java<sup>TM</sup>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+
 		</div>
 
-	</div>
+		<div class="navigation">
+			<a href="index_de.html">Startseite</a> <a href="features_de.html">Funktionen</a>
+			<a href="screenshots_de.html">Screenshots</a> <a
+				href="download_de.html">Download</a> <a href="develop_de.html">Ihre
+				eigene Skat-KI</a>
+			<div class="clearer">
+				<span></span>
+			</div>
+		</div>
 
-	<div class="navigation">
-			<a href="index_de.html">Startseite</a>
-			<a href="features_de.html">Funktionen</a>
-			<a href="screenshots_de.html">Screenshots</a>
-			<a href="download_de.html">Download</a>
-			<a href="develop_de.html">Ihre eigene Skat-KI</a>
-			<div class="clearer"><span></span></div>
-	</div>
+		<div class="main">
 
-	<div class="main">		
-		
-		<div class="content">
+			<div class="content">
 
-			<h1>Eine eigene Skat-KI für JSkat implementieren</h1>
+				<h1>Eine eigene Skat-KI für JSkat implementieren</h1>
 
-			<p>
-			Wenn Sie Interesse haben, selbst einmal eine Skat-KI zu 
-			implementieren, so ist der Start mit JSkat sehr einfach. Die 
-			folgende sechs Schritte sind beispielhaft für die IDE Eclipse
-			mit den Plugins EGit und m2eclipse dargestellt.
-			</p>
-			
-			<h2>Schritt 1: Git-Repository einrichten</h2>
-			
-			<p>
-			Über das Menü "Window - Show View - Git Repositories" können Sie
-			die Sicht auf Repositorys mit dem Versionsverwaltungssystem 
-			Git aktivieren. Klonen Sie das JSkat-Repository indem Sie als URL
-			</p>
+				<p>Wenn Sie Interesse haben, selbst einmal eine Skat-KI zu
+					implementieren, so ist der Start mit JSkat sehr einfach. Die
+					folgende sechs Schritte sind beispielhaft für die IDE Eclipse mit
+					den Plugins EGit und m2eclipse dargestellt.</p>
 
-			<p class="code">
-				<tt>
-				https://github.com/b0n541/jskat-multimodule.git
-				</tt>
-			</p>
-			
-			<p>eingeben.</p>
+				<h2>Schritt 1: Git-Repository einrichten</h2>
 
-			<h2> Schritt 2: JSkat als Projekt einrichten</h2>
+				<p>Über das Menü "Window - Show View - Git Repositories" können
+					Sie die Sicht auf Repositorys mit dem Versionsverwaltungssystem Git
+					aktivieren. Klonen Sie das JSkat-Repository indem Sie als URL</p>
 
-			<p>
-			Klappen Sie das geklonte Repository auf. Jetzt können Sie mit der 
-			rechten Maustaste auf "Working directory" klicken und "Import projects..." 
-			auswählen.
-			</p>
+				<p class="code">
+					<tt> https://github.com/b0n541/jskat-multimodule.git </tt>
+				</p>
 
-			<h2>Schritt 3: Maven aktivieren</h2>
+				<p>eingeben.</p>
 
-			<p>
-			Klicken Sie mit der rechten Maustaste auf das neue Projekt und 
-			wählen Sie "Configure - Convert to Maven Project" aus. Eclipse 
-			sollte jetzt alle benötigten Bibliotheken herunterladen und das 
-			Projekt für die Entwicklung einrichten.
-			</p>
-			
-			<p>
-			Durch Klicken mit der rechten Maustaste auf die Wurzel des Multi-Moduls
-			und auswählen von "Import..." und danach "Existing Maven Projects" können 
-			die Sub-Module des Multi-Moduls als eigene Projekte im Eclipse importiert 
-			werden. Eine Aktivierung der Sub-Module als Maven-Projekte führt auch hier
-			zum Herunterladen aller benötigten Fremd-Bibliotheken.
-			</p>
+				<h2>Schritt 2: JSkat als Projekt einrichten</h2>
 
-			<h2>Schritt 4: Projektstruktur</h2>
+				<p>Klappen Sie das geklonte Repository auf. Jetzt können Sie mit
+					der rechten Maustaste auf "Working directory" klicken und "Import
+					projects..." auswählen.</p>
 
-			<p>
-			JSkat ist in zwei Module aufgeteilt. Im Modul jskat-base
-			liegen die allgemeinen Klassen, die sowohl von JSkat als auch
-			von JSkat on Android genutzt werden. Hier liegen auch die 
-			Klassen der KI-Spieler. Das Modul JSkat enthält alle Klassen für
-			die Swing-GUI von JSkat.
-			</p>
+				<h2>Schritt 3: Maven aktivieren</h2>
 
-			<p>
-			Es gibt vier Verzeichnisse für Quellcode:
-			</p>
-			
-			<ul>
-				<li>src/main/java: Alle Java-Klassen</li>
-				<li>src/main/resources: Alle Ressourcen wie Bilder oder Konfigdateien</li>
-				<li>src/test/java: Alle Unit-Tests</li>
-				<li>src/test/resources: Alle Ressourcen für die Tests</li>
-			</ul>
+				<p>Klicken Sie mit der rechten Maustaste auf das neue Projekt
+					und wählen Sie "Configure - Convert to Maven Project" aus. Eclipse
+					sollte jetzt alle benötigten Bibliotheken herunterladen und das
+					Projekt für die Entwicklung einrichten.</p>
 
-			<p>
-			Im ersten Verzeichnis liegen die Java-Klassen für die KIs.
-			</p>
+				<p>Durch Klicken mit der rechten Maustaste auf die Wurzel des
+					Multi-Moduls und auswählen von "Import..." und danach "Existing
+					Maven Projects" können die Sub-Module des Multi-Moduls als eigene
+					Projekte im Eclipse importiert werden. Eine Aktivierung der
+					Sub-Module als Maven-Projekte führt auch hier zum Herunterladen
+					aller benötigten Fremd-Bibliotheken.</p>
 
-			<h2>Schritt 5: Eigenen Spieler implementieren</h2>
+				<h2>Schritt 4: Projektstruktur</h2>
 
-			<p>
-			Sie können das Package für den Zufallsspieler (unter org.jskat.ai.rnd) 
-			einfach kopieren und unter einem neuen Namen neben neben den anderen 
-			KIs ablegen. Wichtig ist, dass der Spieler von der Klasse 
-			AbstractJSkatPlayer abgeleitet wird, damit er das Wissen über den 
-			Spielverlauf erhält. Die Verarbeitung des Spielverlaufs 
-			(wer hat wann, was gespielt) bekommen Sie über den AbstractJSkatPlayer
-			geschenkt. Jetzt können Sie die einzelnen Spielzüge in einem Skatspiel 
-			programmieren. 
-			</p>
+				<p>JSkat ist in zwei Module aufgeteilt. Im Modul jskat-base
+					liegen die allgemeinen Klassen, die sowohl von JSkat als auch von
+					JSkat on Android genutzt werden. Hier liegen auch die Klassen der
+					KI-Spieler. Das Modul JSkat enthält alle Klassen für die Swing-GUI
+					von JSkat.</p>
 
-			<p>
-			Die Methoden
-			</p>
+				<p>Es gibt vier Verzeichnisse für Quellcode:</p>
 
-			<ul>
-				<li>prepareForNewGame()</li>
-				<li>startGame()</li>
-				<li>bidMore()</li>
-				<li>holdBid()</li>
-				<li>pickUpSkat()</li>
-				<li>discardSkat()</li>
-				<li>announceGame()</li>
-				<li>playCard()</li>
-				<li>finalizeGame()</li>
-			</ul>
+				<ul>
+					<li>src/main/java: Alle Java-Klassen</li>
+					<li>src/main/resources: Alle Ressourcen wie Bilder oder
+						Konfigdateien</li>
+					<li>src/test/java: Alle Unit-Tests</li>
+					<li>src/test/resources: Alle Ressourcen für die Tests</li>
+				</ul>
 
-			<p>
-			werden von der Klasse SkatGame nacheinander aufgerufen. Hier können 
-			Sie die Spielzüge für Ihre KI umsetzen.
-			</p>
+				<p>Im ersten Verzeichnis liegen die Java-Klassen für die KIs.</p>
 
-			<p>
-			Um den Spieler über die Oberfläche von JSkat starten zu können, sind 
-			noch drei weitere Schritte notwendig:
-			</p>
-			
-			<p>
-			In der Enum org.jskat.ai.PlayerType muss ein Eintrag für die neue KI
-			vorhanden sein, z.&nbsp;B.:
-			</p>
+				<h2>Schritt 5: Eigenen Spieler implementieren</h2>
 
-			<p class="code">
-				<tt>
-					<pre>
+				<p>Sie können das Package für den Zufallsspieler (unter
+					org.jskat.ai.rnd) einfach kopieren und unter einem neuen Namen
+					neben neben den anderen KIs ablegen. Wichtig ist, dass der Spieler
+					von der Klasse AbstractJSkatPlayer abgeleitet wird, damit er das
+					Wissen über den Spielverlauf erhält. Die Verarbeitung des
+					Spielverlaufs (wer hat wann, was gespielt) bekommen Sie über den
+					AbstractJSkatPlayer geschenkt. Jetzt können Sie die einzelnen
+					Spielzüge in einem Skatspiel programmieren.</p>
+
+				<p>Die Methoden</p>
+
+				<ul>
+					<li>prepareForNewGame()</li>
+					<li>startGame()</li>
+					<li>bidMore()</li>
+					<li>holdBid()</li>
+					<li>pickUpSkat()</li>
+					<li>discardSkat()</li>
+					<li>announceGame()</li>
+					<li>playCard()</li>
+					<li>finalizeGame()</li>
+				</ul>
+
+				<p>werden von der Klasse SkatGame nacheinander aufgerufen. Hier
+					können Sie die Spielzüge für Ihre KI umsetzen.</p>
+
+				<p>Um den Spieler über die Oberfläche von JSkat starten zu
+					können, sind noch drei weitere Schritte notwendig:</p>
+
+				<p>In der Enum org.jskat.ai.PlayerType muss ein Eintrag für die
+					neue KI vorhanden sein, z.&nbsp;B.:</p>
+
+				<p class="code">
+					<tt>
+						<pre>
 /**
  * My skat AI player
  */
  MY_SKAT_AI_PLAYER("org.jskat.ai.new.MySkatAiPlayer")
  					</pre>
-				</tt>
-			</p>
+					</tt>
+				</p>
 
-			<p>
-			In der Klasse org.jskat.gui.table.SkatSeriesStartDialog ab Zeile 107
-			werden alle verfügbaren KIs für die Oberfläche zusammengesammelt. 
-			Hier muss der neue Spieler hinzugefügt werden:
+				<p>
+					In der Klasse org.jskat.gui.table.SkatSeriesStartDialog ab Zeile
+					107 werden alle verfügbaren KIs für die Oberfläche
+					zusammengesammelt. Hier muss der neue Spieler hinzugefügt werden:
 
-			<p class="code">
-				<tt>
-					<pre>
+					<p class="code">
+						<tt>
+							<pre>
 playerTypes.add(PlayerType.MY_SKAT_AI_PLAYER);
 					</pre>
-				</tt>
-			</p>
+						</tt>
+					</p>
 
-			<p>
-			In der gleichen Klasse muss schließlich ab Zeile 231 der Spieler 
-			noch eine Beschriftung bekommen:
-			</p>
+					<p>In der gleichen Klasse muss schließlich ab Zeile 231 der
+						Spieler noch eine Beschriftung bekommen:</p>
 
-			<p class="code">
-				<tt>
-					<pre>
+					<p class="code">
+						<tt>
+							<pre>
 case MY_SKAT_AI_PLAYER:
   result = "My skat AI player";
   break;
 					</pre>
-				</tt>
-			</p>
+						</tt>
+					</p>
 
-			<p>
-			Jetzt können Sie Ihre KI über die Oberfläche starten.
-			</p>
+					<p>Jetzt können Sie Ihre KI über die Oberfläche starten.</p>
 
-			<h2>Schritt 6: JSkat aus Eclipse heraus starten</h2>
+					<h2>Schritt 6: JSkat aus Eclipse heraus starten</h2>
 
-			<p>
-			Klicken Sie mit der rechten Maustaste auf die Klasse org.jskat.JSkat
-			und wählen Sie "Run as - Java Application" aus. Die Fehlermeldung auf der 
-			Konsole, dass kein Splashscreen gefunden wurde, kann mit dem VM-Parameter
-			</p>
+					<p>Klicken Sie mit der rechten Maustaste auf die Klasse
+						org.jskat.JSkat und wählen Sie "Run as - Java Application" aus.
+						Die Fehlermeldung auf der Konsole, dass kein Splashscreen gefunden
+						wurde, kann mit dem VM-Parameter</p>
 
-			<p class="code">
-				<tt>
-					<pre>
+					<p class="code">
+						<tt>
+							<pre>
 -splash:src/main/resources/org/jskat/gui/img/gui/splash.png					
 					</pre>
-				</tt>
-			</p>
-			
-			<p>
-			behoben werden.
-			</p>
+						</tt>
+					</p>
 
-			<h2>Bonus: Mit offenen Karten spielen</h2>
+					<p>behoben werden.</p>
 
-			<p>
-			Damit Sie besser sehen können, bei welchen Karten Ihr Spieler welche
-			Spielzüge macht, können Sie JSkat auch mit offenen Karten spielen. 
-			Suchen Sie in Ihrem Home-Verzeichnis (z.B. Dokumente und Einstellungen) 
-			ein Verzeichnis mit dem Namen .jskat. Dort liegt die Datei 
-			jskat.properties. Mit einem Text-Editor können sie die Option
-			</p>
+					<h2>Bonus: Mit offenen Karten spielen</h2>
 
-			<p class="code">
-				<tt>
-				cheatDebugMode=true
-				</tt>
-			</p>
-			
-			<p>
-			aktivieren. Beim nächsten Start von JSkat wird nun immer mit offenen 
-			Karten gespielt.
-			</p>
+					<p>Damit Sie besser sehen können, bei welchen Karten Ihr
+						Spieler welche Spielzüge macht, können Sie JSkat auch mit offenen
+						Karten spielen. Suchen Sie in Ihrem Home-Verzeichnis (z.B.
+						Dokumente und Einstellungen) ein Verzeichnis mit dem Namen .jskat.
+						Dort liegt die Datei jskat.properties. Mit einem Text-Editor
+						können sie die Option</p>
 
-			<p>
-			Wir wünschen Ihnen viel Spaß beim Experimentieren und würden uns
-			freuen, wenn Sie uns eine Rückmeldung über Ihre Erfolge bei der 
-			Implementierung einer eigenen Skat-KI geben würden. Noch mehr würden
-			wir uns freuen, wenn wir Sie als KI-Entwickler für JSkat gewinnen 
-			könnten.
-			</p>
+					<p class="code">
+						<tt> cheatDebugMode=true </tt>
+					</p>
+
+					<p>aktivieren. Beim nächsten Start von JSkat wird nun immer mit
+						offenen Karten gespielt.</p>
+
+					<p>Wir wünschen Ihnen viel Spaß beim Experimentieren und würden
+						uns freuen, wenn Sie uns eine Rückmeldung über Ihre Erfolge bei
+						der Implementierung einer eigenen Skat-KI geben würden. Noch mehr
+						würden wir uns freuen, wenn wir Sie als KI-Entwickler für JSkat
+						gewinnen könnten.</p>
+			</div>
+
+			<div class="sidenav">
+				<ul>
+					<li><a href="download_de.html"><img class="textmiddle"
+							src="img/german.png" alt="Deutsch" title="Deutsch" />&nbsp;Deutsche
+							Version</a></li>
+					<li><a href="download.html"><img class="textmiddle"
+							src="img/english.png" alt="English" title="English" />&nbsp;English
+							version</a></li>
+				</ul>
+				<h1>Projekt-Links</h1>
+				<ul>
+					<li><a
+						href="https://sourceforge.net/projects/jskat/files/latest/download">JSkat
+							0.13 herunterladen</a></li>
+					<li><a href="http://www.jskat.org/pad/jskat.xml">PAD Datei</a></li>
+					<li><a href="http://packman.links2linux.de/package/JSkat">Packman
+							RPM</a></li>
+					<li><a
+						href="http://aur.archlinux.org/packages.php?ID=34522&detail=1">Arch-Linux
+							PKGBUILD</a></li>
+					<li><a
+						href="http://sourceforge.net/apps/mantisbt/jskat/my_view_page.php">Fehler
+							melden</a></li>
+				</ul>
+				<h1>Externe Links</h1>
+				<ul>
+					<li><a
+						href="https://play.google.com/store/apps/details?id=de.lola.games.jskat">JSkat
+							on Android</a></li>
+					<li><a href="http://www.ispaworld.org/downloads.php?sekt=1">Internationale
+							Skatordnung</a></li>
+					<li><a href="http://skatgame.net/iss/">Internationaler
+							Skat-Server</a></li>
+				</ul>
+			</div>
+
+			<div class="clearer">
+				<span></span>
+			</div>
 
 		</div>
 
-		<div class="sidenav">
-			<ul>
-				<li><a href="download_de.html"><img class="textmiddle" src="img/german.png" alt="Deutsch" title="Deutsch" />&nbsp;Deutsche Version</a></li>
-				<li><a href="download.html"><img class="textmiddle" src="img/english.png" alt="English" title="English" />&nbsp;English version</a></li>
-			</ul>
-			<h1>Projekt-Links</h1>
-			<ul>
-				<li><a href="https://sourceforge.net/projects/jskat/files/latest/download">JSkat 0.13 herunterladen</a></li>
-				<li><a href="http://www.jskat.org/pad/jskat.xml">PAD Datei</a></li>
-				<li><a href="http://packman.links2linux.de/package/JSkat">Packman RPM</a></li>
-				<li><a href="http://aur.archlinux.org/packages.php?ID=34522&detail=1">Arch-Linux PKGBUILD</a></li>
-				<li><a href="http://sourceforge.net/apps/mantisbt/jskat/my_view_page.php">Fehler melden</a></li>
-			</ul>
-			<h1>Externe Links</h1>
-			<ul>
-				<li><a href="https://play.google.com/store/apps/details?id=de.lola.games.jskat">JSkat on Android</a></li>
-				<li><a href="http://www.ispaworld.org/downloads.php?sekt=1">Internationale Skatordnung</a></li>
-				<li><a href="http://skatgame.net/iss/">Internationaler Skat-Server</a></li>
-			</ul>
+		<div class="footer">
+			&copy;&nbsp;2013 <a href="index.html">www.jskat.org</a>. Valides <a
+				href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+			&amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>.
+			Website-Vorlage von <a href="http://templates.arcsin.se">Arcsin</a>.
+			Flaggen-Icons von <a href="http://commons.wikimedia.org/">Wikimedia
+				Commons</a>
 		</div>
 
-		<div class="clearer"><span></span></div>
-
 	</div>
-
-	<div class="footer">
-		&copy;&nbsp;2013 <a href="index.html">www.jskat.org</a>. Valides <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>. Website-Vorlage von <a href="http://templates.arcsin.se">Arcsin</a>. Flaggen-Icons von <a href="http://commons.wikimedia.org/">Wikimedia Commons</a>
-	</div>
-
-</div>
 
 </body>
 
