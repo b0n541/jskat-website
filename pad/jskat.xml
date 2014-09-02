@@ -86,7 +86,7 @@
 		</Application_URLs>
 		<Download_URLs>
 			<Primary_Download_URL>http://sourceforge.net/projects/jskat/files/latest/download</Primary_Download_URL>
-			<Secondary_Download_URL />
+			<Secondary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/download/v0.14.0/JSkat-0.14.0.jar</Secondary_Download_URL>
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
 		</Download_URLs>
