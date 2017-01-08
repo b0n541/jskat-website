@@ -61,7 +61,7 @@
 				<p>Wenn Sie Interesse haben, selbst einmal eine Skat-KI zu
 					implementieren, so ist der Start mit JSkat sehr einfach. Die
 					folgende sechs Schritte sind beispielhaft für die IDE Eclipse mit
-					den Plugins EGit und m2eclipse dargestellt.</p>
+					den Plugins EGit (Git) und Buildship (Gradle) dargestellt.</p>
 
 				<h2>Schritt 1: Git-Repository einrichten</h2>
 
@@ -78,32 +78,35 @@
 				<h2>Schritt 2: JSkat als Projekt einrichten</h2>
 
 				<p>Klappen Sie das geklonte Repository auf. Jetzt können Sie mit
-					der rechten Maustaste auf "Working directory" klicken und "Import
-					projects..." auswählen.</p>
+					der rechten Maustaste auf "Working Tree" klicken und "Import
+					projects..." auswählen. Im nächsten Dialog wählen Sie als Wizard
+					"Import as general project"	aus.</p>
 
-				<h2>Schritt 3: Maven aktivieren</h2>
+				<h2>Schritt 3: Gradle aktivieren</h2>
 
 				<p>Klicken Sie mit der rechten Maustaste auf das neue Projekt
-					und wählen Sie "Configure - Convert to Maven Project" aus. Eclipse
+					und wählen Sie "Configure - Add Gradle Nature" aus. Eclipse
 					sollte jetzt alle benötigten Bibliotheken herunterladen und das
-					Projekt für die Entwicklung einrichten.</p>
-
-				<p>Durch Klicken mit der rechten Maustaste auf die Wurzel des
-					Multi-Moduls und auswählen von "Import..." und danach "Existing
-					Maven Projects" können die Sub-Module des Multi-Moduls als eigene
-					Projekte im Eclipse importiert werden. Eine Aktivierung der
-					Sub-Module als Maven-Projekte führt auch hier zum Herunterladen
-					aller benötigten Fremd-Bibliotheken.</p>
+					Projekt für die Entwicklung einrichten. Nach dem erfolgreichen
+					Einrichten sollten drei neue Sub-Projekte in Eclipse sichtbar sein.</p>
 
 				<h2>Schritt 4: Projektstruktur</h2>
 
-				<p>JSkat ist in zwei Module aufgeteilt. Im Modul jskat-base
-					liegen die allgemeinen Klassen, die sowohl von JSkat als auch von
-					JSkat on Android genutzt werden. Hier liegen auch die Klassen der
-					KI-Spieler. Das Modul JSkat enthält alle Klassen für die Swing-GUI
-					von JSkat.</p>
+				<p>JSkat ist in drei Sub-Projekte aufgeteilt. Durch die Trennung von
+					GUI-Code und Logik konnten weite Teile von JSkat für JSkat on Android
+					wieder verwendet werden.</p>
 
-				<p>Es gibt vier Verzeichnisse für Quellcode:</p>
+				<ul>
+					<li>jskat-base<br/>Basis-Klassen ohne GUI-Code, werden sowohl von JSkat
+					als auch von Jskat on Android genutzt. Hier liegen auch die Klassen
+				  für die KI-Spieler.</li>
+					<li>jskat-swing-gui<br/>GUI-Klassen für die Swing-basierten GUI-Teile,
+					diese werden nach und nach auf JavaFx umgestellt</li>
+					<li>jskat-javafx-gui<br/>GUI-Klassen für die JavaFX-basierten GUI-Teile
+						und die Main-Klasse zum Starten von JSkat</li>
+				</ul>
+
+				<p>In jedem Sub-Projekt gibt es vier Verzeichnisse für Quellcode:</p>
 
 				<ul>
 					<li>src/main/java: Alle Java-Klassen</li>
@@ -113,7 +116,8 @@
 					<li>src/test/resources: Alle Ressourcen für die Tests</li>
 				</ul>
 
-				<p>Im ersten Verzeichnis liegen die Java-Klassen für die KIs.</p>
+				<p>Im ersten Verzeichnis im Sub-Projekt jskat-base liegen die
+					Java-Klassen für die KIs.</p>
 
 				<h2>Schritt 5: Eigenen Spieler implementieren</h2>
 
