@@ -34,10 +34,10 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>JSkat</Program_Name>
-		<Program_Version>0.15.0</Program_Version>
-		<Program_Release_Month>7</Program_Release_Month>
-		<Program_Release_Day>13</Program_Release_Day>
-		<Program_Release_Year>2015</Program_Release_Year>
+		<Program_Version>0.16.0</Program_Version>
+		<Program_Release_Month>1</Program_Release_Month>
+		<Program_Release_Day>23</Program_Release_Day>
+		<Program_Release_Year>2017</Program_Release_Year>
 		<Program_Cost_Dollars />
 		<Program_Cost_Other_Code />
 		<Program_Cost_Other />
@@ -85,8 +85,8 @@
 			<Application_XML_File_URL>http://www.jskat.org/pad/jskat.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>http://sourceforge.net/projects/jskat/files/latest/download</Primary_Download_URL>
-			<Secondary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/download/v0.15.0/JSkat-0.15.0.jar</Secondary_Download_URL>
+			<Primary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/tag/v0.16.0</Primary_Download_URL>
+			<Secondary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/download/v0.16.0/JSkat-0.16.0-all.jar</Secondary_Download_URL>
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
 		</Download_URLs>
