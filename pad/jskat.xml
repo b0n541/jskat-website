@@ -34,9 +34,9 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>JSkat</Program_Name>
-		<Program_Version>0.16.0</Program_Version>
-		<Program_Release_Month>1</Program_Release_Month>
-		<Program_Release_Day>23</Program_Release_Day>
+		<Program_Version>0.16.1</Program_Version>
+		<Program_Release_Month>12</Program_Release_Month>
+		<Program_Release_Day>26</Program_Release_Day>
 		<Program_Release_Year>2017</Program_Release_Year>
 		<Program_Cost_Dollars />
 		<Program_Cost_Other_Code />
@@ -85,8 +85,8 @@
 			<Application_XML_File_URL>http://www.jskat.org/pad/jskat.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/tag/v0.16.0</Primary_Download_URL>
-			<Secondary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/download/v0.16.0/JSkat-0.16.0-all.jar</Secondary_Download_URL>
+			<Primary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/tag/v0.16.1</Primary_Download_URL>
+			<Secondary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/download/v0.16.1/JSkat-0.16.1-all.jar</Secondary_Download_URL>
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
 		</Download_URLs>
@@ -97,6 +97,6 @@
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</EULA>
+You should have received a copy of the GNU General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</EULA>
 	</Permissions>
 </XML_DIZ_INFO>
