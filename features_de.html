@@ -2,164 +2,173 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="description"
-	content="JSkat is a free implementation of the German card game Skat in Java" />
-<meta name="keywords" lang="de"
-	content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, GPL, GNU General Public License, Freie Software, Open Source, Windows, Linux, Mac OS, Funktionen">
-	<meta name="keywords" lang="en"
-		content="JSkat, Skat, artificial intelligenz, neural networks, Java, GPL, GNU General Public License, free software, open source, Windows, Linux, Mac OS, features">
-		<meta name="author" content="Jan Schäfer" />
-		<link rel="stylesheet" type="text/css" href="styles/default.css"
-			media="screen" />
-		<title>JSkat</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description"
+          content="JSkat is a free implementation of the German card game Skat in Java"/>
+    <meta name="keywords" lang="de"
+          content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, GPL, GNU General Public License, Freie Software, Open Source, Windows, Linux, Mac OS, Funktionen">
+    <meta name="keywords" lang="en"
+          content="JSkat, Skat, artificial intelligenz, neural networks, Java, GPL, GNU General Public License, free software, open source, Windows, Linux, Mac OS, features">
+    <meta name="author" content="Jan Schäfer"/>
+    <link rel="stylesheet" type="text/css" href="styles/default.css"
+          media="screen"/>
+    <title>JSkat</title>
 </head>
 
 <body>
-	<a href="https://github.com/b0n541/jskat-multimodule"><img
-		style="position: absolute; top: 0; right: 0; border: 0;"
-		src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
-		alt="Fork me on GitHub"></a>
+<a href="https://github.com/b0n541/jskat-multimodule"><img
+        style="position: absolute; top: 0; right: 0; border: 0;"
+        src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+        alt="Fork me on GitHub"></a>
 
-	<div class="container">
+<div class="container">
 
-		<div class="header">
+    <div class="header">
 
-			<div class="title">
-				<table>
-					<tr>
-						<td><img src="img/jskat_logo.png" alt="JSkat logo"
-							title="JSkat logo" /></td>
-						<td>
-							<h1>JSkat</h1>
-							<p class="descr">
-								Eine freie Software, geschrieben in Java<sup>TM</sup>
-							</p>
-						</td>
-					</tr>
-				</table>
-			</div>
+        <div class="title">
+            <table>
+                <tr>
+                    <td><img src="img/jskat_logo.png" alt="JSkat logo"
+                             title="JSkat logo"/></td>
+                    <td>
+                        <h1>JSkat</h1>
+                        <p class="descr">
+                            Eine freie Software, geschrieben in Java<sup>TM</sup>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-		</div>
+    </div>
 
-		<div class="navigation">
-			<a href="index_de.html">Startseite</a> <a href="features_de.html">Funktionen</a>
-			<a href="screenshots_de.html">Screenshots</a> <a
-				href="download_de.html">Download</a> <a href="develop_de.html">Ihre
-				eigene Skat-KI</a>
-			<div class="clearer">
-				<span></span>
-			</div>
-		</div>
+    <div class="navigation">
+        <a href="index_de.html">Startseite</a> <a href="features_de.html">Funktionen</a>
+        <a href="screenshots_de.html">Screenshots</a> <a
+            href="download_de.html">Download</a> <a href="develop_de.html">Ihre
+        eigene Skat-KI</a>
+        <div class="clearer">
+            <span></span>
+        </div>
+    </div>
 
-		<div class="main">
+    <div class="main">
 
-			<div class="content">
+        <div class="content">
 
-				<h1>Funktionen</h1>
+            <h1>Funktionen</h1>
 
-				<p>Die folgenden Funktionen sind implementiert oder werden in
-					einer zukünftigen Version von JSkat umgesetzt:</p>
+            <p>Die folgenden Funktionen sind implementiert oder werden in
+                einer zukünftigen Version von JSkat umgesetzt:</p>
 
-				<h2>Skatregeln</h2>
+            <h2>Skatregeln</h2>
 
-				<ul>
-					<li>Spielen nach den offiziellen Regeln der <a
-						href="http://www.ispaworld.org">International Skat Players
-							Association (ISPA-World)</a></li>
-					<li>Spielen von Farb-, Grand- und Nullspielen</li>
-					<li>Spiele werden eingepasst, wenn kein Spieler ein Reizgebot
-						abgibt</li>
-					<li>Spielen nach Kneipenregeln wie Kontra, Ramsch und Bock
-						(geplant)</li>
-					<li>Berechnung der Gewinne und Verluste nach jedem Spiel</li>
-				</ul>
+            <ul>
+                <li>Spielen nach den offiziellen Regeln der <a
+                        href="http://www.ispaworld.org">International Skat Players
+                    Association (ISPA-World)</a></li>
+                <li>Spielen von Farb-, Grand- und Nullspielen</li>
+                <li>Spiele werden eingepasst, wenn kein Spieler ein Reizgebot
+                    abgibt
+                </li>
+                <li>Spielen nach Kneipenregeln wie Kontra, Ramsch und Bock
+                    (geplant)
+                </li>
+                <li>Berechnung der Gewinne und Verluste nach jedem Spiel</li>
+            </ul>
 
-				<h2>KI-Skatspieler</h2>
+            <h2>KI-Skatspieler</h2>
 
-				<p>Zurzeit gibt es drei KI-Spieler für JSkat:</p>
-				<ul>
-					<li><b>Algorithmisch</b><br /> Ein Spieler mit vorsichtigem
-						Reizverhalten, einfacher Intelligenz für Gegenspieler und
-						Alleinspieler.</li>
-					<li><b>Neuronales Netz</b><br /> Ein Spieler der neuronale
-						Netze zur Berechnung der Spielstrategie benutzt.</li>
-					<li><b>Rainer Zufall</b><br /> Ein Zufallsspieler der zum
-						Testen von JSkat verwendet wird und die Spieler zum Wahnsinn
-						treibt. ;o)</li>
-				</ul>
+            <p>Zurzeit gibt es drei KI-Spieler für JSkat:</p>
+            <ul>
+                <li><b>Algorithmisch</b><br/> Ein Spieler mit vorsichtigem
+                    Reizverhalten, einfacher Intelligenz für Gegenspieler und
+                    Alleinspieler.
+                </li>
+                <li><b>Neuronales Netz</b><br/> Ein Spieler der neuronale
+                    Netze zur Berechnung der Spielstrategie benutzt.
+                </li>
+                <li><b>Rainer Zufall</b><br/> Ein Zufallsspieler der zum
+                    Testen von JSkat verwendet wird und die Spieler zum Wahnsinn
+                    treibt. ;o)
+                </li>
+            </ul>
 
-				<p>Es gibt eine Schnittstelle für die KI-Spieler. Wenn Sie einen
-					eigenen KI-Spieler entwickeln möchten, müssen Sie nur diese
-					Schnittstelle implementieren, damit Ihr Spieler in JSkat integriert
-					werden kann. Es würde uns freuen, wenn wir neue Entwickler in
-					unserem Team willkommen heißen können.</p>
+            <p>Es gibt eine Schnittstelle für die KI-Spieler. Wenn Sie einen
+                eigenen KI-Spieler entwickeln möchten, müssen Sie nur diese
+                Schnittstelle implementieren, damit Ihr Spieler in JSkat integriert
+                werden kann. Es würde uns freuen, wenn wir neue Entwickler in
+                unserem Team willkommen heißen können.</p>
 
-				<h2>Cheat- und Debug-Modus</h2>
+            <h2>Cheat- und Debug-Modus</h2>
 
-				<ul>
-					<li>Schauen Sie in die Karten der anderen Skatspieler</li>
-					<li>Gehen Sie alle Stiche eines Spiels nach Spielende noch
-						einmal durch</li>
-					<li>Beobachten Sie drei KI-Spieler, wie sie gegeneinander
-						spielen</li>
-				</ul>
+            <ul>
+                <li>Schauen Sie in die Karten der anderen Skatspieler</li>
+                <li>Gehen Sie alle Stiche eines Spiels nach Spielende noch
+                    einmal durch
+                </li>
+                <li>Beobachten Sie drei KI-Spieler, wie sie gegeneinander
+                    spielen
+                </li>
+            </ul>
 
-				<h2>Andere Funktionen</h2>
+            <h2>Andere Funktionen</h2>
 
-				<ul>
-					<li>Speichern der Daten als XML-Dateien (geplant)</li>
-					<li>Unterstützung für verschiedene Sprachen<br /> Zurzeit
-						unterstützen wir Deutsch und Englisch. Wenn Sie eine Übersetzung
-						beisteuern möchten, <a href="mailto:jansch@users.sourceforge.net">kontaktieren</a>
-						Sie uns bitte.
-					</li>
-				</ul>
+            <ul>
+                <li>Speichern der Daten als XML-Dateien (geplant)</li>
+                <li>Unterstützung für verschiedene Sprachen<br/> Zurzeit
+                    unterstützen wir Deutsch und Englisch. Wenn Sie eine Übersetzung
+                    beisteuern möchten, <a href="mailto:jansch@users.sourceforge.net">kontaktieren</a>
+                    Sie uns bitte.
+                </li>
+            </ul>
 
-			</div>
+        </div>
 
-			<div class="sidenav">
-				<ul>
-					<li><a href="features_de.html"><img class="textmiddle"
-							src="img/german.png" alt="Deutsch" title="Deutsch" />&nbsp;Deutsche
-							Version</a></li>
-					<li><a href="features.html"><img class="textmiddle"
-							src="img/english.png" alt="English" title="English" />&nbsp;English
-							version</a></li>
-				</ul>
-				<h1>Projekt-Links</h1>
-				<ul>
-					<li><a href="https://github.com/b0n541/jskat-multimodule/releases/tag/v0.16.1">JSkat 0.16.1 herunterladen</a></li>
-					<li><a href="http://www.jskat.org/pad/jskat.xml">PAD Datei</a></li>
-					<li><a href="https://github.com/b0n541/jskat-multimodule">Github</a></li>
-					<li><a href="https://github.com/b0n541/jskat-multimodule/issues">Fehler	melden</a></li>
-				</ul>
-				<h1>Externe Links</h1>
-				<ul>
-					<li><a href="http://rpm.pbone.net/index.php3?stat=3&search=JSkat&srodzaj=3">RPM JSkat</a></li>
-					<li><a href="https://aur.archlinux.org/packages/jskat/">Arch-Linux PKGBUILD</a></li>
-					<li><a href="https://play.google.com/store/apps/details?id=de.lola.games.jskat">JSkat	on Android</a></li>
-					<li><a href="http://skatgame.net/iss/">Internationaler Skat-Server</a></li>
-					<li><a href="http://www.ispaworld.org/downloads.php?sekt=1">Internationale Skatordnung</a></li>
-				</ul>
-			</div>
+        <div class="sidenav">
+            <ul>
+                <li><a href="features_de.html"><img class="textmiddle"
+                                                    src="img/german.png" alt="Deutsch" title="Deutsch"/>&nbsp;Deutsche
+                    Version</a></li>
+                <li><a href="features.html"><img class="textmiddle"
+                                                 src="img/english.png" alt="English" title="English"/>&nbsp;English
+                    version</a></li>
+            </ul>
+            <h1>Projekt-Links</h1>
+            <ul>
+                <li><a href="https://github.com/b0n541/jskat-multimodule/releases/tag/v0.17.0">JSkat 0.17.0
+                    herunterladen</a></li>
+                <li><a href="http://www.jskat.org/pad/jskat.xml">PAD Datei</a></li>
+                <li><a href="https://github.com/b0n541/jskat-multimodule">Github</a></li>
+                <li><a href="https://github.com/b0n541/jskat-multimodule/issues">Fehler melden</a></li>
+            </ul>
+            <h1>Externe Links</h1>
+            <ul>
+                <li><a href="http://rpm.pbone.net/index.php3?stat=3&search=JSkat&srodzaj=3">RPM JSkat</a></li>
+                <li><a href="https://aur.archlinux.org/packages/jskat/">Arch-Linux PKGBUILD</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=de.lola.games.jskat">JSkat on Android</a>
+                </li>
+                <li><a href="http://skatgame.net/iss/">Internationaler Skat-Server</a></li>
+                <li><a href="http://www.ispaworld.org/downloads.php?sekt=1">Internationale Skatordnung</a></li>
+            </ul>
+        </div>
 
-			<div class="clearer">
-				<span></span>
-			</div>
+        <div class="clearer">
+            <span></span>
+        </div>
 
-		</div>
+    </div>
 
-		<div class="footer">
-			&copy;&nbsp;2017 <a href="index.html">www.jskat.org</a>. Valides <a
-				href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-			&amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>.
-			Website-Vorlage von <a href="http://templates.arcsin.se">Arcsin</a>.
-			Flaggen-Icons von <a href="http://commons.wikimedia.org/">Wikimedia
-				Commons</a>
-		</div>
+    <div class="footer">
+        &copy;&nbsp;2017 <a href="index.html">www.jskat.org</a>. Valides <a
+            href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+        &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>.
+        Website-Vorlage von <a href="http://templates.arcsin.se">Arcsin</a>.
+        Flaggen-Icons von <a href="http://commons.wikimedia.org/">Wikimedia
+        Commons</a>
+    </div>
 
-	</div>
+</div>
 
 </body>
 
