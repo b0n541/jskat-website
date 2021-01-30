@@ -37,10 +37,10 @@
     </Company_Info>
     <Program_Info>
         <Program_Name>JSkat</Program_Name>
-        <Program_Version>0.18.0</Program_Version>
-        <Program_Release_Month>11</Program_Release_Month>
-        <Program_Release_Day>19</Program_Release_Day>
-        <Program_Release_Year>2020</Program_Release_Year>
+        <Program_Version>0.19.0</Program_Version>
+        <Program_Release_Month>1</Program_Release_Month>
+        <Program_Release_Day>30</Program_Release_Day>
+        <Program_Release_Year>2021</Program_Release_Year>
         <Program_Cost_Dollars/>
         <Program_Cost_Other_Code/>
         <Program_Cost_Other/>
@@ -92,7 +92,7 @@
             <Application_XML_File_URL>http://www.jskat.org/pad/jskat.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/tag/v0.18.0
+            <Primary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/tag/v0.19.0
             </Primary_Download_URL>
             <Secondary_Download_URL>
             </Secondary_Download_URL>
