@@ -37,10 +37,10 @@
     </Company_Info>
     <Program_Info>
         <Program_Name>JSkat</Program_Name>
-        <Program_Version>0.19.0</Program_Version>
-        <Program_Release_Month>1</Program_Release_Month>
-        <Program_Release_Day>30</Program_Release_Day>
-        <Program_Release_Year>2021</Program_Release_Year>
+        <Program_Version>0.20.0</Program_Version>
+        <Program_Release_Month>2</Program_Release_Month>
+        <Program_Release_Day>23</Program_Release_Day>
+        <Program_Release_Year>2022</Program_Release_Year>
         <Program_Cost_Dollars/>
         <Program_Cost_Other_Code/>
         <Program_Cost_Other/>
@@ -56,9 +56,9 @@
         <Program_Categories/>
         <Program_System_Requirements>Java Runtime Environment</Program_System_Requirements>
         <File_Info>
-            <File_Size_Bytes>55000000</File_Size_Bytes>
-            <File_Size_K>55000.00</File_Size_K>
-            <File_Size_MB>55.00</File_Size_MB>
+            <File_Size_Bytes>60000000</File_Size_Bytes>
+            <File_Size_K>60000.00</File_Size_K>
+            <File_Size_MB>60.00</File_Size_MB>
         </File_Info>
         <Expire_Info>
             <Has_Expire_Info>N</Has_Expire_Info>
@@ -92,7 +92,7 @@
             <Application_XML_File_URL>http://www.jskat.org/pad/jskat.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/tag/v0.19.0
+            <Primary_Download_URL>https://github.com/b0n541/jskat-multimodule/releases/tag/v0.20.0
             </Primary_Download_URL>
             <Secondary_Download_URL>
             </Secondary_Download_URL>
