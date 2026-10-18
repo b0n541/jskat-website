@@ -30,11 +30,11 @@
 <main id="main-content">
     <section class="page-hero" data-suit="♠">
         <div class="shell">
-            <p class="eyebrow">Your idea at the table</p>
+            <p class="eyebrow">For developers</p>
             <h1>Build your own Skat AI</h1>
             <p class="page-intro">
-                JSkat is an open playground for new strategies. Build the project, learn from the existing players,
-                and bring your own approach to a real game of Skat.
+                JSkat includes several computer players and makes it possible to add your own. This guide shows you
+                how to build the project, find the relevant code, and connect a new player to the game.
             </p>
         </div>
     </section>
@@ -43,8 +43,8 @@
         <div class="shell prose-layout">
             <div>
                 <section class="prose-section" id="start">
-                    <p class="eyebrow">Get started</p>
-                    <h2>From repository to first change</h2>
+                    <p class="eyebrow">Set up the project</p>
+                    <h2>Build JSkat and find your way around</h2>
                     <p>
                         You need Git and at least JDK 21. The Gradle wrapper is included in the repository, so you do
                         not need to install Gradle separately. A Java IDE is useful, but the first build only needs a
@@ -57,7 +57,7 @@
                             <h3>Fork and clone the repository</h3>
                             <p>
                                 Fork <a href="https://github.com/b0n541/jskat">JSkat on GitHub</a> and clone your fork.
-                                This gives you a safe place to prepare and publish changes.
+                                You can then prepare and publish changes in your own repository.
                             </p>
                             <code class="code-block">git clone https://github.com/YOUR-NAME/jskat.git
 cd jskat</code>
@@ -73,7 +73,7 @@ cd jskat</code>
 
                         <article class="step-card">
                             <span class="step-number">03</span>
-                            <h3>Find your way around the code</h3>
+                            <h3>See where the code lives</h3>
                             <p>
                                 Game logic and AI components live in <span class="inline-code">jskat-base</span>.
                                 The JavaFX interface lives in <span class="inline-code">jskat-gui</span>, while
@@ -83,7 +83,7 @@ cd jskat</code>
 
                         <article class="step-card">
                             <span class="step-number">04</span>
-                            <h3>Choose a player as your starting point</h3>
+                            <h3>Start with an existing player</h3>
                             <p>
                                 The smallest complete example is
                                 <a href="https://github.com/b0n541/jskat/blob/develop/jskat-base/src/main/java/org/jskat/ai/rnd/AIPlayerRND.java">AIPlayerRND</a>
@@ -195,17 +195,16 @@ cd jskat</code>
                 </section>
 
                 <section class="prose-section" id="ideas">
-                    <p class="eyebrow">A good first step</p>
-                    <h2>You do not have to start with a complete AI</h2>
+                    <p class="eyebrow">Other ways to contribute</p>
+                    <h2>You can start with something smaller</h2>
                     <p>
-                        Smaller contributions move the project forward too: a reproducible bug report, an additional
-                        test case, clearer documentation, or an improvement to the JavaFX interface. Open issues show
-                        where help is currently useful.
+                        A reproducible bug report, another test case, clearer documentation, or an interface improvement
+                        all help. The open issues show what people are currently working on and where help is needed.
                     </p>
                     <aside class="page-callout">
                         <div>
-                            <h2>Looking for a first task?</h2>
-                            <p>Ask a question or choose a focused issue that matches your interests.</p>
+                            <h2>Looking for something to work on?</h2>
+                            <p>Ask a question or pick an issue that matches your interests.</p>
                         </div>
                         <a class="button button-light" href="https://github.com/b0n541/jskat/issues">Browse issues</a>
                     </aside>
@@ -231,7 +230,7 @@ cd jskat</code>
             <a class="brand footer-brand" href="index.html">
                 <img src="img/jskat_logo.png" alt="" width="38" height="40"><span>JSkat</span>
             </a>
-            <p>Free Skat for curious players and contributors.</p>
+            <p>A free, open-source Skat game for the desktop.</p>
         </div>
         <nav aria-label="Footer navigation">
             <a href="features.html">Features</a><a href="screenshots.html">Screenshots</a>
@@ -243,4 +242,3 @@ cd jskat</code>
 </footer>
 </body>
 </html>
-
