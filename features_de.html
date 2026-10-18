@@ -1,162 +1,143 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
+<!doctype html>
+<html lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="description"
-          content="JSkat is a free implementation of the German card game Skat in Java"/>
-    <meta name="keywords" lang="de"
-          content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, Apache License 2.0, Freie Software, Open Source, Windows, Linux, Mac OS, Funktionen"/>
-    <meta name="keywords" lang="en"
-          content="JSkat, Skat, artificial intelligenz, neural networks, Java, Apache License 2.0, free software, open source, Windows, Linux, Mac OS, features"/>
-    <meta name="author" content="Jan Schäfer"/>
-    <link rel="stylesheet" type="text/css" href="styles/default.css"
-          media="screen"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
-    <title>JSkat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Entdecken Sie die Regeln, KI-Spieler und Übungsfunktionen von JSkat.">
+    <meta name="author" content="Jan Schäfer">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Funktionen — JSkat</title>
 </head>
-
 <body>
-
-<div>
-    <a class="github-fork-ribbon" href="https://github.com/b0n541/jskat" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
-</div>
-
-<div class="container">
-
-    <div class="header">
-
-        <div class="title">
-            <table>
-                <tr>
-                    <td><img src="img/jskat_logo.png" alt="JSkat logo"
-                             title="JSkat logo"/></td>
-                    <td>
-                        <h1>JSkat</h1>
-                        <p class="descr">
-                            Eine freie Software, geschrieben in Java<sup>TM</sup>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="shell header-inner">
+        <a class="brand" href="index_de.html" aria-label="JSkat Startseite">
+            <img src="img/jskat_logo.png" alt="" width="48" height="51"><span>JSkat</span>
+        </a>
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <a href="index_de.html">Startseite</a>
+            <a class="active" href="features_de.html" aria-current="page">Funktionen</a>
+            <a href="screenshots_de.html">Screenshots</a>
+            <a href="download_de.html">Download</a>
+            <a href="develop_de.html">KI entwickeln</a>
+            <a class="nav-github" href="https://github.com/b0n541/jskat">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+        <a class="language-link" href="features.html" lang="en">
+            <img src="img/english.png" alt="" width="20" height="12"> English
+        </a>
     </div>
+</header>
 
-    <div class="navigation">
-        <a href="index_de.html">Startseite</a> <a href="features_de.html">Funktionen</a>
-        <a href="screenshots_de.html">Screenshots</a> <a
-            href="download_de.html">Download</a> <a href="develop_de.html">Ihre
-        eigene Skat-KI</a>
-        <div class="clearer">
-            <span></span>
+<main id="main-content">
+    <section class="page-hero" data-suit="♣">
+        <div class="shell">
+            <p class="eyebrow">Für den ganzen Tisch gemacht</p>
+            <h1>Alles für die nächste Runde</h1>
+            <p class="page-intro">
+                Spielen Sie die wichtigsten Skatvarianten, treten Sie gegen verschiedene KI-Spieler an und verfolgen
+                Sie mit praktischen Werkzeugen, wie sich ein Spiel entwickelt.
+            </p>
+        </div>
+    </section>
+
+    <div class="page-content">
+        <div class="shell">
+            <div class="content-heading">
+                <p class="eyebrow">Das Spiel</p>
+                <h2>Klassische Regeln, jederzeit spielbereit</h2>
+                <p>JSkat bildet eine vertraute Skatrunde ab und lässt zugleich Raum zum Üben und Experimentieren.</p>
+            </div>
+
+            <ul class="rule-list">
+                <li>Farb-, Grand- und Nullspiele spielen</li>
+                <li>Eine vollständige Runde mit drei Spielern reizen</li>
+                <li>Einpassen, wenn niemand ein Gebot abgibt</li>
+                <li>Gewinne und Verluste nach jedem Spiel berechnen</li>
+                <li>Nach den offiziellen Skatregeln spielen</li>
+                <li>Kneipenregeln nutzen, sobald sie hinzukommen</li>
+            </ul>
+
+            <section class="content-split">
+                <div class="split-copy">
+                    <p class="eyebrow">KI-Spieler</p>
+                    <h2>Verschiedene Köpfe am Tisch</h2>
+                    <p>
+                        Wählen Sie einen Gegner, der zu Ihrer gewünschten Partie passt. Version 0.24 bringt den ersten
+                        leistungsfähigen Spieler auf Basis maschinellen Lernens und behält einfachere Gegner zum
+                        Vergleichen und Testen bei.
+                    </p>
+                </div>
+                <ul class="detail-list">
+                    <li>
+                        <strong>Machine-Learning-Spieler</strong>
+                        Ein neuer Gegner in 0.24, der eine umfangreichere Strategie aus Spieldaten lernt.
+                    </li>
+                    <li>
+                        <strong>Algorithmischer Spieler</strong>
+                        Nutzt vorsichtiges Reizen und regelbasierte Entscheidungen für Allein- und Gegenspieler.
+                    </li>
+                    <li>
+                        <strong>Rainer Zufall</strong>
+                        Entscheidet zufällig und hilft dabei, unerwartete Spielsituationen zu testen.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content-split">
+                <div class="split-copy">
+                    <p class="eyebrow">Genauer hinschauen</p>
+                    <h2>Werkzeuge zum Lernen und Testen</h2>
+                    <p>
+                        JSkat kann mehr vom Spiel zeigen, wenn Sie eine Entscheidung untersuchen, eine KI testen oder
+                        nach der letzten Karte nachvollziehen möchten, wie das Ergebnis entstanden ist.
+                    </p>
+                </div>
+                <div class="info-grid">
+                    <article class="info-card">
+                        <span class="card-icon" aria-hidden="true">♠</span>
+                        <h3>Offene Karten</h3>
+                        <p>Zeigen Sie beim Analysieren oder Testen die Karten aller Spieler an.</p>
+                    </article>
+                    <article class="info-card">
+                        <span class="card-icon red" aria-hidden="true">♦</span>
+                        <h3>Stiche prüfen</h3>
+                        <p>Gehen Sie nach dem Spiel alle Stiche durch und verfolgen Sie die Entwicklung.</p>
+                    </article>
+                    <article class="info-card">
+                        <span class="card-icon" aria-hidden="true">♣</span>
+                        <h3>KI-Tisch</h3>
+                        <p>Lassen Sie drei KI-Spieler gegeneinander antreten und beobachten Sie ihre Entscheidungen.</p>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="page-callout">
+                <div>
+                    <h2>Eine Idee für die nächste Funktion?</h2>
+                    <p>Funktionswünsche, Fehlerberichte, Übersetzungen und Code-Beiträge sind willkommen.</p>
+                </div>
+                <a class="button button-light" href="https://github.com/b0n541/jskat/issues">Auf GitHub teilen</a>
+            </aside>
         </div>
     </div>
+</main>
 
-    <div class="main">
-
-        <div class="content">
-
-            <h1>Funktionen</h1>
-
-            <p>Die folgenden Funktionen sind implementiert oder werden in
-                einer zukünftigen Version von JSkat umgesetzt:</p>
-
-            <h2>Skatregeln</h2>
-
-            <ul>
-                <li>Spielen nach den offiziellen Regeln der <a
-                        href="http://www.ispaworld.org">International Skat Players
-                    Association (ISPA-World)</a></li>
-                <li>Spielen von Farb-, Grand- und Nullspielen</li>
-                <li>Spiele werden eingepasst, wenn kein Spieler ein Reizgebot
-                    abgibt
-                </li>
-                <li>Spielen nach Kneipenregeln wie Kontra, Ramsch und Bock
-                    (geplant)
-                </li>
-                <li>Berechnung der Gewinne und Verluste nach jedem Spiel</li>
-            </ul>
-
-            <h2>KI-Skatspieler</h2>
-
-            <p>Zurzeit gibt es drei KI-Spieler für JSkat:</p>
-            <ul>
-                <li><b>Algorithmisch</b><br/> Ein Spieler mit vorsichtigem
-                    Reizverhalten, einfacher Intelligenz für Gegenspieler und
-                    Alleinspieler.
-                </li>
-                <li><b>Neuronales Netz</b><br/> Ein Spieler der neuronale
-                    Netze zur Berechnung der Spielstrategie benutzt.
-                </li>
-                <li><b>Rainer Zufall</b><br/> Ein Zufallsspieler der zum
-                    Testen von JSkat verwendet wird und die Spieler zum Wahnsinn
-                    treibt. ;o)
-                </li>
-            </ul>
-
-            <p>Es gibt eine Schnittstelle für die KI-Spieler. Wenn Sie einen
-                eigenen KI-Spieler entwickeln möchten, müssen Sie nur diese
-                Schnittstelle implementieren, damit Ihr Spieler in JSkat integriert
-                werden kann. Es würde uns freuen, wenn wir neue Entwickler in
-                unserem Team willkommen heißen können.</p>
-
-            <h2>Cheat- und Debug-Modus</h2>
-
-            <ul>
-                <li>Schauen Sie in die Karten der anderen Skatspieler</li>
-                <li>Gehen Sie alle Stiche eines Spiels nach Spielende noch einmal durch</li>
-                <li>Beobachten Sie drei KI-Spieler, wie sie gegeneinander spielen</li>
-            </ul>
-
-            <h2>Andere Funktionen</h2>
-
-            <ul>
-                <li>Speichern der Daten als JSON- oder SGF-Dateien (geplant)</li>
-                <li>Unterstützung für verschiedene Sprachen<br/> Zurzeit
-                    unterstützen wir Deutsch und Englisch. Wenn Sie eine Übersetzung
-                    beisteuern möchten, <a href="mailto:jansch@users.sourceforge.net">kontaktieren</a>
-                    Sie uns bitte.
-                </li>
-            </ul>
-
+<footer class="site-footer">
+    <div class="shell footer-inner">
+        <div>
+            <a class="brand footer-brand" href="index_de.html">
+                <img src="img/jskat_logo.png" alt="" width="38" height="40"><span>JSkat</span>
+            </a>
+            <p>Freies Skat für neugierige Spieler und Mitwirkende.</p>
         </div>
-
-        <div class="sidenav">
-            <ul>
-                <li><a href="features_de.html"><img class="textmiddle" src="img/german.png" alt="Deutsch" title="Deutsch"/>&nbsp;Deutsch</a></li>
-                <li><a href="features.html"><img class="textmiddle" src="img/english.png" alt="English" title="English"/>&nbsp;English</a></li>
-            </ul>
-            <h1>Projekt-Links</h1>
-            <ul>
-                <li><a href="https://github.com/b0n541/jskat/releases/tag/v0.24.0">JSkat 0.24.0 herunterladen</a></li>
-                <li><a href="http://www.jskat.org/pad/jskat.xml">PAD Datei</a></li>
-                <li><a href="https://github.com/b0n541/jskat">Github</a></li>
-                <li><a href="https://github.com/b0n541/jskat/issues">Fehler melden</a></li>
-            </ul>
-            <h1>Externe Links</h1>
-            <ul>
-                <li><a href="http://rpm.pbone.net/index.php3?stat=3&search=JSkat&srodzaj=3">RPM JSkat</a></li>
-                <li><a href="https://aur.archlinux.org/packages/jskat/">Arch-Linux PKGBUILD</a></li>
-                <li><a href="http://skatgame.net/iss/">Internationaler Skat-Server</a></li>
-            </ul>
-        </div>
-
-        <div class="clearer">
-            <span></span>
-        </div>
-
+        <nav aria-label="Navigation im Seitenfuß">
+            <a href="features_de.html">Funktionen</a><a href="screenshots_de.html">Screenshots</a>
+            <a href="download_de.html">Download</a><a href="develop_de.html">KI entwickeln</a>
+            <a href="https://github.com/b0n541/jskat/issues">Issues</a>
+        </nav>
+        <p class="copyright">© 2026 JSkat</p>
     </div>
-
-    <div class="footer">
-        &copy;&nbsp;2026 <a href="index.html">www.jskat.org</a>.
-        Website-Vorlage von <a href="http://templates.arcsin.se">Arcsin</a>.
-        Flaggen-Icons von <a href="http://commons.wikimedia.org/">Wikimedia
-        Commons</a>
-    </div>
-
-</div>
-
+</footer>
 </body>
-
 </html>

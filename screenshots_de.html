@@ -1,119 +1,126 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
+<!doctype html>
+<html lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="description"
-          content="JSkat is a free implementation of the German card game Skat in Java"/>
-    <meta name="keywords" lang="de"
-          content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, Apache License 2.0, Freie Software, Open Source, Windows, Linux, Mac OS, Screenshots"/>
-    <meta name="keywords" lang="en"
-          content="JSkat, Skat, artificial intelligenz, neural networks, Java, Apache License 2.0, free software, open source, Windows, Linux, Mac OS, screen shots"/>
-    <meta name="author" content="Jan Schäfer"/>
-    <link rel="stylesheet" type="text/css" href="styles/default.css"
-          media="screen"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
-    <title>JSkat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sehen Sie den Spieltisch, das Reizen, Ausspielen und die Online-Lobby von JSkat.">
+    <meta name="author" content="Jan Schäfer">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Screenshots — JSkat</title>
 </head>
-
 <body>
-
-<div>
-    <a class="github-fork-ribbon" href="https://github.com/b0n541/jskat" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
-</div>
-
-<div class="container">
-
-    <div class="header">
-
-        <div class="title">
-            <table>
-                <tr>
-                    <td><img src="img/jskat_logo.png" alt="JSkat logo"
-                             title="JSkat logo"/></td>
-                    <td>
-                        <h1>JSkat</h1>
-                        <p class="descr">
-                            Eine freie Software, geschrieben in Java<sup>TM</sup>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="shell header-inner">
+        <a class="brand" href="index_de.html" aria-label="JSkat Startseite">
+            <img src="img/jskat_logo.png" alt="" width="48" height="51"><span>JSkat</span>
+        </a>
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <a href="index_de.html">Startseite</a><a href="features_de.html">Funktionen</a>
+            <a class="active" href="screenshots_de.html" aria-current="page">Screenshots</a>
+            <a href="download_de.html">Download</a><a href="develop_de.html">KI entwickeln</a>
+            <a class="nav-github" href="https://github.com/b0n541/jskat">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+        <a class="language-link" href="screenshots.html" lang="en">
+            <img src="img/english.png" alt="" width="20" height="12"> English
+        </a>
     </div>
+</header>
 
-    <div class="navigation">
-        <a href="index_de.html">Startseite</a> <a href="features_de.html">Funktionen</a>
-        <a href="screenshots_de.html">Screenshots</a> <a
-            href="download_de.html">Download</a> <a href="develop_de.html">Ihre
-        eigene Skat-KI</a>
-        <div class="clearer">
-            <span></span>
+<main id="main-content">
+    <section class="page-hero" data-suit="♦">
+        <div class="shell">
+            <p class="eyebrow">Ein Platz am Tisch</p>
+            <h1>JSkat im Spiel</h1>
+            <p class="page-intro">
+                Vom ersten Reizgebot bis zum letzten Stich hält JSkat alle wichtigen Informationen griffbereit.
+                Schauen Sie sich um, bevor Sie Ihre erste Partie beginnen.
+            </p>
+        </div>
+    </section>
+
+    <div class="page-content">
+        <div class="shell">
+            <div class="gallery-grid">
+                <figure class="gallery-item featured">
+                    <div class="gallery-image">
+                        <img src="img/jskat_0.24_bidding.png"
+                             alt="JSkat 0.24 beim Reizen mit den Karten aller drei Spieler"
+                             width="1915" height="1263">
+                    </div>
+                    <figcaption>
+                        <span>Der neue JavaFX-Spieltisch</span>
+                        <p>Version 0.24 bringt die überarbeitete Oberfläche und die gesamte Reizsituation in eine klare Ansicht.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="img/jskat_0.22_start_screen.png" alt="Startbildschirm von JSkat" width="600" height="431">
+                    </div>
+                    <figcaption>
+                        <span>Den Tisch wählen</span>
+                        <p>Starten Sie eine lokale Serie gegen KI-Spieler oder verbinden Sie sich mit dem Internationalen Skat-Server.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="img/jskat_0.22_bidding.png" alt="Reizen in JSkat" width="600" height="431">
+                    </div>
+                    <figcaption>
+                        <span>Sicher reizen</span>
+                        <p>Verfolgen Sie jedes Gebot und entscheiden Sie, wann Sie halten, weiterreizen oder passen.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="img/jskat_0.22_trick_playing.png" alt="Ausspielen eines Stichs in JSkat" width="600" height="431">
+                    </div>
+                    <figcaption>
+                        <span>Die Hand spielen</span>
+                        <p>Behalten Sie Tisch, Karten, Punktestand und Spieldetails während jedes Stichs im Blick.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="img/jskat_0.22_iss_lobby.png" alt="Lobby des Internationalen Skat-Servers" width="600" height="431">
+                    </div>
+                    <figcaption>
+                        <span>Online Mitspieler treffen</span>
+                        <p>Die ISS-Lobby zeigt angemeldete Spieler und die Tische, an denen gerade gespielt wird.</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <aside class="page-callout">
+                <div>
+                    <h2>Bereit zum Geben?</h2>
+                    <p>Laden Sie die aktuelle Version herunter und starten Sie eine lokale Partie mit JSkat 0.24.</p>
+                </div>
+                <a class="button button-light" href="download_de.html">JSkat herunterladen</a>
+            </aside>
         </div>
     </div>
+</main>
 
-    <div class="main">
-
-        <div class="content">
-
-            <h1>Screenshots</h1>
-
-            <img src="img/jskat_0.22_start_screen.png" title="Startbildschirm"
-                 alt="Startbildschirm" width="600" height="431"/>
-            <p>Der neue Startbildschirm zeigt die zwei Spieloptionen für
-                JSkat: Sie können offline gegen die mitgelieferten KI-Spieler oder
-                online gegen Menschen oder die derzeit stärksten KI-Spieler auf dem
-                Internationalen Skat-Server spielen.</p>
-            <img src="img/jskat_0.22_bidding.png" title="Reizen" alt="Reizen"
-                 width="600" height="431"/>
-            <p>Reizen</p>
-            <img src="img/jskat_0.22_trick_playing.png" title="Ausspielen"
-                 alt="Ausspielen" width="600" height="431"/>
-            <p>Ausspielen</p>
-            <img src="img/jskat_0.22_iss_lobby.png" title="ISS Lobby"
-                 alt="ISS lobby" width="600" height="431"/>
-            <p>Die Lobby des ISS. Sie haben eine Übersicht über alle
-                angemeldeten Spieler und über alle Tische, an denen gerade gespielt
-                wird.</p>
-
+<footer class="site-footer">
+    <div class="shell footer-inner">
+        <div>
+            <a class="brand footer-brand" href="index_de.html">
+                <img src="img/jskat_logo.png" alt="" width="38" height="40"><span>JSkat</span>
+            </a>
+            <p>Freies Skat für neugierige Spieler und Mitwirkende.</p>
         </div>
-
-        <div class="sidenav">
-            <ul>
-                <li><a href="screenshots_de.html"><img class="textmiddle" src="img/german.png" alt="Deutsch" title="Deutsch"/>&nbsp;Deutsch</a></li>
-                <li><a href="screenshots.html"><img class="textmiddle" src="img/english.png" alt="English" title="English"/>&nbsp;English</a></li>
-            </ul>
-            <h1>Projekt-Links</h1>
-            <ul>
-                <li><a href="https://github.com/b0n541/jskat/releases/tag/v0.24.0">JSkat 0.24.0 herunterladen</a></li>
-                <li><a href="http://www.jskat.org/pad/jskat.xml">PAD Datei</a></li>
-                <li><a href="https://github.com/b0n541/jskat">Github</a></li>
-                <li><a href="https://github.com/b0n541/jskat/issues">Fehler melden</a></li>
-            </ul>
-            <h1>Externe Links</h1>
-            <ul>
-                <li><a href="http://rpm.pbone.net/index.php3?stat=3&search=JSkat&srodzaj=3">RPM JSkat</a></li>
-                <li><a href="https://aur.archlinux.org/packages/jskat/">Arch-Linux PKGBUILD</a></li>
-                <li><a href="http://skatgame.net/iss/">Internationaler Skat-Server</a></li>
-            </ul>
-        </div>
-
-        <div class="clearer">
-            <span></span>
-        </div>
-
+        <nav aria-label="Navigation im Seitenfuß">
+            <a href="features_de.html">Funktionen</a><a href="screenshots_de.html">Screenshots</a>
+            <a href="download_de.html">Download</a><a href="develop_de.html">KI entwickeln</a>
+            <a href="https://github.com/b0n541/jskat/issues">Issues</a>
+        </nav>
+        <p class="copyright">© 2026 JSkat</p>
     </div>
-
-    <div class="footer">
-        &copy;&nbsp;2026 <a href="index.html">www.jskat.org</a>.
-        Website-Vorlage von <a href="http://templates.arcsin.se">Arcsin</a>.
-        Flaggen-Icons von <a href="http://commons.wikimedia.org/">Wikimedia
-        Commons</a>
-    </div>
-
-</div>
-
+</footer>
 </body>
-
 </html>

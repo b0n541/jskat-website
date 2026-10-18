@@ -1,277 +1,246 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
+<!doctype html>
+<html lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="description"
-          content="JSkat is a free implementation of the German card game Skat in Java"/>
-    <meta name="keywords" lang="de"
-          content="JSkat, Skat, Künstliche Intelligenz, Neuronale Netze, Java, Apache License 2.0, Freie Software, Open Source, Windows, Linux, Mac OS, Programmierung"/>
-    <meta name="keywords" lang="en"
-          content="JSkat, Skat, artificial intelligenz, neural networks, Java, Apache License 2.0, free software, open source, Windows, Linux, Mac OS, development"/>
-    <meta name="author" content="Jan Schäfer"/>
-    <link rel="stylesheet" type="text/css" href="styles/default.css"
-          media="screen"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
-    <title>JSkat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Einstieg in die JSkat-Entwicklung und die Implementierung eigener Skat-KI-Spieler.">
+    <meta name="author" content="Jan Schäfer">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>KI entwickeln — JSkat</title>
 </head>
-
 <body>
-
-<div>
-    <a class="github-fork-ribbon" href="https://github.com/b0n541/jskat" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
-</div>
-
-<div class="container">
-
-    <div class="header">
-
-        <div class="title">
-            <table>
-                <tr>
-                    <td><img src="img/jskat_logo.png" alt="JSkat logo"
-                             title="JSkat logo"/></td>
-                    <td>
-                        <h1>JSkat</h1>
-                        <p class="descr">
-                            Eine freie Software, geschrieben in Java<sup>TM</sup>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="shell header-inner">
+        <a class="brand" href="index_de.html" aria-label="JSkat Startseite">
+            <img src="img/jskat_logo.png" alt="" width="48" height="51"><span>JSkat</span>
+        </a>
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <a href="index_de.html">Startseite</a><a href="features_de.html">Funktionen</a>
+            <a href="screenshots_de.html">Screenshots</a><a href="download_de.html">Download</a>
+            <a class="active" href="develop_de.html" aria-current="page">KI entwickeln</a>
+            <a class="nav-github" href="https://github.com/b0n541/jskat">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+        <a class="language-link" href="https://github.com/b0n541/jskat" lang="en">
+            <img src="img/english.png" alt="" width="20" height="12"> English
+        </a>
     </div>
+</header>
 
-    <div class="navigation">
-        <a href="index_de.html">Startseite</a> <a href="features_de.html">Funktionen</a>
-        <a href="screenshots_de.html">Screenshots</a> <a
-            href="download_de.html">Download</a> <a href="develop_de.html">Ihre
-        eigene Skat-KI</a>
-        <div class="clearer">
-            <span></span>
+<main id="main-content">
+    <section class="page-hero" data-suit="♠">
+        <div class="shell">
+            <p class="eyebrow">Ihre Idee am Tisch</p>
+            <h1>Eine eigene Skat-KI entwickeln</h1>
+            <p class="page-intro">
+                JSkat ist ein offenes Spielfeld für neue Strategien. Bauen Sie das Projekt, lernen Sie die vorhandenen
+                Spieler kennen und bringen Sie Ihren eigenen Ansatz in eine echte Skatpartie.
+            </p>
+        </div>
+    </section>
+
+    <div class="page-content">
+        <div class="shell prose-layout">
+            <div>
+                <section class="prose-section" id="start">
+                    <p class="eyebrow">Loslegen</p>
+                    <h2>Vom Repository zur ersten Änderung</h2>
+                    <p>
+                        Sie brauchen Git und mindestens JDK 21. Der Gradle Wrapper liegt im Repository, deshalb müssen
+                        Sie Gradle nicht separat installieren. Eine Java-IDE ist hilfreich, aber für den ersten Build
+                        nicht erforderlich.
+                    </p>
+
+                    <div class="steps">
+                        <article class="step-card">
+                            <span class="step-number">01</span>
+                            <h3>Repository forken und klonen</h3>
+                            <p>
+                                Forken Sie <a href="https://github.com/b0n541/jskat">JSkat auf GitHub</a> und klonen Sie
+                                Ihren Fork. So können Sie Änderungen unabhängig vorbereiten.
+                            </p>
+                            <code class="code-block">git clone https://github.com/IHR-NAME/jskat.git
+cd jskat</code>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">02</span>
+                            <h3>Projekt bauen</h3>
+                            <p>Der vollständige Build prüft das Projekt und erzeugt anschließend eine ausführbare JAR-Datei.</p>
+                            <code class="code-block">./gradlew clean build
+./gradlew fatjar</code>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">03</span>
+                            <h3>Orientierung im Code</h3>
+                            <p>
+                                Die Spiellogik und KI-Bausteine liegen in <span class="inline-code">jskat-base</span>.
+                                Die JavaFX-Oberfläche befindet sich in <span class="inline-code">jskat-javafx-gui</span>,
+                                der Anwendungsstart in <span class="inline-code">app</span>.
+                            </p>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">04</span>
+                            <h3>Einen Spieler als Ausgangspunkt wählen</h3>
+                            <p>
+                                Der kleinste vollständige Ausgangspunkt ist
+                                <a href="https://github.com/b0n541/jskat/blob/develop/jskat-base/src/main/java/org/jskat/ai/rnd/AIPlayerRND.java">AIPlayerRND</a>
+                                im Package <span class="inline-code">org.jskat.ai.rnd</span>. Kopieren Sie seine Struktur
+                                in ein eigenes Package, zum Beispiel <span class="inline-code">org.jskat.ai.myplayer</span>,
+                                und lassen Sie Ihre Klasse weiterhin von
+                                <a href="https://github.com/b0n541/jskat/blob/develop/jskat-base/src/main/java/org/jskat/ai/AbstractAIPlayer.java">AbstractAIPlayer</a>
+                                erben. Die abstrakte Basisklasse stellt den gemeinsamen Spielzustand bereit und markiert
+                                Ihre Implementierung automatisch als KI-Spieler. Ihre Klasse braucht außerdem einen
+                                öffentlichen Konstruktor ohne Parameter, weil JSkat normale KI-Spieler per Reflection erzeugt.
+                            </p>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">05</span>
+                            <h3>Den neuen KI-Spieler implementieren und registrieren</h3>
+                            <p>
+                                Eine KI wird während einer Partie mehrfach nach Entscheidungen gefragt. Die geerbte
+                                Variable <span class="inline-code">knowledge</span> enthält dabei unter anderem die
+                                eigenen Karten, Sitzposition, bisherigen Gebote, den aktuellen Stich, den Alleinspieler
+                                und den Spielvertrag.
+                            </p>
+
+                            <ol class="implementation-list">
+                                <li>
+                                    <strong>Lebenszyklus vorbereiten</strong>
+                                    Nutzen Sie <span class="inline-code">prepareForNewGame()</span>, um den Zustand vor
+                                    jeder neuen Partie zurückzusetzen. <span class="inline-code">startGame()</span> wird
+                                    aufgerufen, sobald Alleinspieler und Spielvertrag feststehen.
+                                </li>
+                                <li>
+                                    <strong>Reizstrategie festlegen</strong>
+                                    <span class="inline-code">bidMore(int nextBidValue)</span> gibt das nächste Gebot
+                                    oder <span class="inline-code">0</span> zum Passen zurück.
+                                    <span class="inline-code">holdBid(int currBidValue)</span> entscheidet, ob ein
+                                    genanntes Gebot gehalten wird.
+                                </li>
+                                <li>
+                                    <strong>Skat und Spielansage behandeln</strong>
+                                    <span class="inline-code">pickUpSkat()</span> entscheidet über die Aufnahme.
+                                    <span class="inline-code">getCardsToDiscard()</span> muss danach genau zwei Karten
+                                    zurückgeben. Mit <span class="inline-code">announceGame()</span> erzeugen Sie den
+                                    gewünschten <span class="inline-code">GameContract</span>.
+                                </li>
+                                <li>
+                                    <strong>Eine erlaubte Karte ausspielen</strong>
+                                    Rufen Sie zuerst
+                                    <span class="inline-code">getPlayableCards(knowledge.getTrickCards())</span> auf.
+                                    Wählen Sie ausschließlich aus dieser Liste, damit Bedienpflicht und Spielregeln
+                                    eingehalten werden.
+                                </li>
+                                <li>
+                                    <strong>Sonderfälle und Abschluss ergänzen</strong>
+                                    Implementieren Sie <span class="inline-code">playGrandHand()</span>,
+                                    <span class="inline-code">callContra()</span> und
+                                    <span class="inline-code">callRe()</span>. In
+                                    <span class="inline-code">finalizeGame()</span> können Sie Statistiken aktualisieren
+                                    oder Lernschritte nach Abschluss einer Partie ausführen.
+                                </li>
+                            </ol>
+
+                            <p class="implementation-label">Der Kern einer legalen Kartenauswahl kann so aussehen:</p>
+                            <code class="code-block">public final class MyAIPlayer extends AbstractAIPlayer {
+    public MyAIPlayer() {
+        // Wird von JSkat per Reflection aufgerufen.
+    }
+
+    @Override
+    public Card playCard() {
+        CardList playable =
+            getPlayableCards(knowledge.getTrickCards());
+        return chooseCard(playable);
+    }
+
+    // Die übrigen abstrakten Entscheidungen ebenfalls
+    // wie in AIPlayerRND implementieren.
+}</code>
+
+                            <div class="registration-note">
+                                <strong>Damit die neue KI im Startdialog erscheint</strong>
+                                <p>
+                                    Ergänzen Sie den vollständig qualifizierten Klassennamen in
+                                    <a href="https://github.com/b0n541/jskat/blob/develop/jskat-base/src/main/java/org/jskat/player/JSkatPlayerResolver.java">JSkatPlayerResolver.getAllAIPlayerImplementations()</a>.
+                                    Fügen Sie anschließend in
+                                    <a href="https://github.com/b0n541/jskat/blob/develop/jskat-gui/src/main/kotlin/org/jskat/gui/javafx/table/SkatSeriesStartDialog.kt">SkatSeriesStartDialog.PlayerTypeCell</a>
+                                    eine lesbare Beschriftung hinzu. Den Textschlüssel tragen Sie in
+                                    <span class="inline-code">jskat_strings_de.properties</span> und
+                                    <span class="inline-code">jskat_strings_en.properties</span> ein.
+                                </p>
+                            </div>
+
+                            <p>
+                                Legen Sie Tests im passenden Package unter
+                                <span class="inline-code">jskat-base/src/test/java/org/jskat/ai</span> ab. Beginnen Sie
+                                mit kleinen, deterministischen Fällen für Reizen oder Kartenauswahl und führen Sie sie
+                                mit <span class="inline-code">./gradlew :jskat-base:test</span> aus.
+                            </p>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">06</span>
+                            <h3>Beitrag einreichen</h3>
+                            <p>
+                                Erstellen Sie Ihren Feature-Branch vom Branch <span class="inline-code">develop</span>.
+                                Öffnen Sie anschließend einen Pull Request zurück nach <span class="inline-code">develop</span>
+                                und beschreiben Sie Idee und Verhalten Ihrer Änderung.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="prose-section" id="ideas">
+                    <p class="eyebrow">Guter Einstieg</p>
+                    <h2>Sie müssen nicht mit einer kompletten KI beginnen</h2>
+                    <p>
+                        Auch kleinere Beiträge bringen das Projekt weiter: ein reproduzierbarer Fehlerbericht, ein
+                        zusätzlicher Testfall, verständlichere Dokumentation oder eine Verbesserung der JavaFX-Oberfläche.
+                        Offene Issues zeigen, wo gerade Hilfe gebraucht wird.
+                    </p>
+                    <aside class="page-callout">
+                        <div>
+                            <h2>Erstes Thema gesucht?</h2>
+                            <p>Stellen Sie eine Frage oder wählen Sie ein überschaubares Issue aus.</p>
+                        </div>
+                        <a class="button button-light" href="https://github.com/b0n541/jskat/issues">Issues ansehen</a>
+                    </aside>
+                </section>
+            </div>
+
+            <aside class="page-aside">
+                <h2>Projektressourcen</h2>
+                <a href="https://github.com/b0n541/jskat">Repository</a>
+                <a href="https://github.com/b0n541/jskat/issues">Offene Issues</a>
+                <a href="https://github.com/b0n541/jskat/pulls">Pull Requests</a>
+                <a href="https://github.com/b0n541/jskat/blob/develop/README.md">README</a>
+                <a href="https://github.com/b0n541/jskat/blob/develop/CODE_OF_CONDUCT.md">Verhaltenskodex</a>
+                <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>
+            </aside>
         </div>
     </div>
+</main>
 
-    <div class="main">
-
-        <div class="content">
-
-            <h1>Eine eigene Skat-KI für JSkat implementieren</h1>
-
-            <p>Wenn Sie Interesse haben, selbst einmal eine Skat-KI zu
-                implementieren, so ist der Start mit JSkat sehr einfach. Die
-                folgende sechs Schritte sind beispielhaft für die IDE Eclipse mit
-                den Plugins EGit (Git) und Buildship (Gradle) dargestellt.</p>
-
-            <h2>Schritt 1: Git-Repository einrichten</h2>
-
-            <p>Über das Menü "Window - Show View - Git Repositories" können
-                Sie die Sicht auf Repositorys mit dem Versionsverwaltungssystem Git
-                aktivieren. Klonen Sie das JSkat-Repository indem Sie als URL</p>
-
-            <p class="code">
-                <tt> https://github.com/b0n541/jskat.git </tt>
-            </p>
-
-            <p>eingeben.</p>
-
-            <h2>Schritt 2: JSkat als Projekt einrichten</h2>
-
-            <p>Klappen Sie das geklonte Repository auf. Jetzt können Sie mit
-                der rechten Maustaste auf "Working Tree" klicken und "Import
-                projects..." auswählen. Im nächsten Dialog wählen Sie als Wizard
-                "Import as general project" aus.</p>
-
-            <h2>Schritt 3: Gradle aktivieren</h2>
-
-            <p>Klicken Sie mit der rechten Maustaste auf das neue Projekt
-                und wählen Sie "Configure - Add Gradle Nature" aus. Eclipse
-                sollte jetzt alle benötigten Bibliotheken herunterladen und das
-                Projekt für die Entwicklung einrichten. Nach dem erfolgreichen
-                Einrichten sollten drei neue Sub-Projekte in Eclipse sichtbar sein.</p>
-
-            <h2>Schritt 4: Projektstruktur</h2>
-
-            <p>JSkat ist in drei Sub-Projekte aufgeteilt. Durch die Trennung von
-                GUI-Code und Logik konnten weite Teile von JSkat für JSkat on Android
-                wieder verwendet werden.</p>
-
-            <ul>
-                <li>jskat-base<br/>Basis-Klassen ohne GUI-Code, werden sowohl von JSkat
-                    als auch von Jskat on Android genutzt. Hier liegen auch die Klassen
-                    für die KI-Spieler.
-                </li>
-                <li>jskat-swing-gui<br/>GUI-Klassen für die Swing-basierten GUI-Teile,
-                    diese werden nach und nach auf JavaFx umgestellt
-                </li>
-                <li>jskat-javafx-gui<br/>GUI-Klassen für die JavaFX-basierten GUI-Teile
-                    und die Main-Klasse zum Starten von JSkat
-                </li>
-            </ul>
-
-            <p>In jedem Sub-Projekt gibt es vier Verzeichnisse für Quellcode:</p>
-
-            <ul>
-                <li>src/main/java: Alle Java-Klassen</li>
-                <li>src/main/resources: Alle Ressourcen wie Bilder oder
-                    Konfigdateien
-                </li>
-                <li>src/test/java: Alle Unit-Tests</li>
-                <li>src/test/resources: Alle Ressourcen für die Tests</li>
-            </ul>
-
-            <p>Im ersten Verzeichnis im Sub-Projekt jskat-base liegen die
-                Java-Klassen für die KIs.</p>
-
-            <h2>Schritt 5: Eigenen Spieler implementieren</h2>
-
-            <p>Sie können das Package für den Zufallsspieler (unter
-                org.jskat.ai.rnd) einfach kopieren und unter einem neuen Namen
-                neben neben den anderen KIs ablegen. Wichtig ist, dass der Spieler
-                von der Klasse AbstractJSkatPlayer abgeleitet wird, damit er das
-                Wissen über den Spielverlauf erhält. Die Verarbeitung des
-                Spielverlaufs (wer hat wann, was gespielt) bekommen Sie über den
-                AbstractJSkatPlayer geschenkt. Jetzt können Sie die einzelnen
-                Spielzüge in einem Skatspiel programmieren.</p>
-
-            <p>Die Methoden</p>
-
-            <ul>
-                <li>prepareForNewGame()</li>
-                <li>startGame()</li>
-                <li>bidMore()</li>
-                <li>holdBid()</li>
-                <li>pickUpSkat()</li>
-                <li>discardSkat()</li>
-                <li>announceGame()</li>
-                <li>playCard()</li>
-                <li>finalizeGame()</li>
-            </ul>
-
-            <p>werden von der Klasse SkatGame nacheinander aufgerufen. Hier
-                können Sie die Spielzüge für Ihre KI umsetzen.</p>
-
-            <p>Um den Spieler über die Oberfläche von JSkat starten zu
-                können, sind noch drei weitere Schritte notwendig:</p>
-
-            <p>In der Enum org.jskat.ai.PlayerType muss ein Eintrag für die
-                neue KI vorhanden sein, z.&nbsp;B.:</p>
-
-            <p class="code">
-                <tt>
-						<pre>
-/**
- * My skat AI player
- */
- MY_SKAT_AI_PLAYER("org.jskat.ai.new.MySkatAiPlayer")
- 					</pre>
-                </tt>
-            </p>
-
-            <p>
-                In der Klasse org.jskat.gui.table.SkatSeriesStartDialog ab Zeile
-                107 werden alle verfügbaren KIs für die Oberfläche
-                zusammengesammelt. Hier muss der neue Spieler hinzugefügt werden:
-
-            <p class="code">
-                <tt>
-							<pre>
-playerTypes.add(PlayerType.MY_SKAT_AI_PLAYER);
-					</pre>
-                </tt>
-            </p>
-
-            <p>In der gleichen Klasse muss schließlich ab Zeile 231 der
-                Spieler noch eine Beschriftung bekommen:</p>
-
-            <p class="code">
-                <tt>
-							<pre>
-case MY_SKAT_AI_PLAYER:
-  result = "My skat AI player";
-  break;
-					</pre>
-                </tt>
-            </p>
-
-            <p>Jetzt können Sie Ihre KI über die Oberfläche starten.</p>
-
-            <h2>Schritt 6: JSkat aus Eclipse heraus starten</h2>
-
-            <p>Klicken Sie mit der rechten Maustaste auf die Klasse
-                org.jskat.JSkat und wählen Sie "Run as - Java Application" aus.
-                Die Fehlermeldung auf der Konsole, dass kein Splashscreen gefunden
-                wurde, kann mit dem VM-Parameter</p>
-
-            <p class="code">
-                <tt>
-							<pre>
--splash:src/main/resources/org/jskat/gui/img/gui/splash.png
-					</pre>
-                </tt>
-            </p>
-
-            <p>behoben werden.</p>
-
-            <h2>Bonus: Mit offenen Karten spielen</h2>
-
-            <p>Damit Sie besser sehen können, bei welchen Karten Ihr
-                Spieler welche Spielzüge macht, können Sie JSkat auch mit offenen
-                Karten spielen. Suchen Sie in Ihrem Home-Verzeichnis (z.B.
-                Dokumente und Einstellungen) ein Verzeichnis mit dem Namen .jskat.
-                Dort liegt die Datei jskat.properties. Mit einem Text-Editor
-                können sie die Option</p>
-
-            <p class="code">
-                <tt> cheatDebugMode=true </tt>
-            </p>
-
-            <p>aktivieren. Beim nächsten Start von JSkat wird nun immer mit
-                offenen Karten gespielt.</p>
-
-            <p>Wir wünschen Ihnen viel Spaß beim Experimentieren und würden
-                uns freuen, wenn Sie uns eine Rückmeldung über Ihre Erfolge bei
-                der Implementierung einer eigenen Skat-KI geben würden. Noch mehr
-                würden wir uns freuen, wenn wir Sie als KI-Entwickler für JSkat
-                gewinnen könnten.</p>
+<footer class="site-footer">
+    <div class="shell footer-inner">
+        <div>
+            <a class="brand footer-brand" href="index_de.html">
+                <img src="img/jskat_logo.png" alt="" width="38" height="40"><span>JSkat</span>
+            </a>
+            <p>Freies Skat für neugierige Spieler und Mitwirkende.</p>
         </div>
-
-        <div class="sidenav">
-            <ul>
-                <li><a href="develop_de.html"><img class="textmiddle" src="img/german.png" alt="Deutsch" title="Deutsch"/>&nbsp;Deutsch</a></li>
-                <li><a href="download.html"><img class="textmiddle" src="img/english.png" alt="English" title="English"/>&nbsp;English</a></li>
-            </ul>
-            <h1>Projekt-Links</h1>
-            <ul>
-                <li><a href="https://github.com/b0n541/jskat/releases/tag/v0.24.0">JSkat 0.24.0 herunterladen</a></li>
-                <li><a href="http://www.jskat.org/pad/jskat.xml">PAD Datei</a></li>
-                <li><a href="https://github.com/b0n541/jskat">Github</a></li>
-                <li><a href="https://github.com/b0n541/jskat/issues">Fehler melden</a></li>
-            </ul>
-            <h1>Externe Links</h1>
-            <ul>
-                <li><a href="http://rpm.pbone.net/index.php3?stat=3&search=JSkat&srodzaj=3">RPM JSkat</a></li>
-                <li><a href="https://aur.archlinux.org/packages/jskat/">Arch-Linux PKGBUILD</a></li>
-                <li><a href="http://skatgame.net/iss/">Internationaler Skat-Server</a></li>
-            </ul>
-        </div>
-
-        <div class="clearer">
-            <span></span>
-        </div>
-
+        <nav aria-label="Navigation im Seitenfuß">
+            <a href="features_de.html">Funktionen</a><a href="screenshots_de.html">Screenshots</a>
+            <a href="download_de.html">Download</a><a href="develop_de.html">KI entwickeln</a>
+            <a href="https://github.com/b0n541/jskat/issues">Issues</a>
+        </nav>
+        <p class="copyright">© 2026 JSkat</p>
     </div>
-
-    <div class="footer">
-        &copy;&nbsp;2026 <a href="index.html">www.jskat.org</a>.
-        Website-Vorlage von <a href="http://templates.arcsin.se">Arcsin</a>.
-        Flaggen-Icons von <a href="http://commons.wikimedia.org/">Wikimedia
-        Commons</a>
-    </div>
-
-</div>
-
+</footer>
 </body>
-
 </html>
