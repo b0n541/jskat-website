@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get started with JSkat development and build your own Skat AI player.">
+    <meta name="author" content="Jan Schäfer">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Build an AI — JSkat</title>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+    <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="JSkat home">
+            <img src="img/jskat_logo.png" alt="" width="48" height="51"><span>JSkat</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a><a href="features.html">Features</a>
+            <a href="screenshots.html">Screenshots</a><a href="download.html">Download</a>
+            <a class="active" href="develop.html" aria-current="page">Build an AI</a>
+            <a class="nav-github" href="https://github.com/b0n541/jskat">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+        <a class="language-link" href="develop_de.html" lang="de">
+            <img src="img/german.png" alt="" width="20" height="12"> Deutsch
+        </a>
+    </div>
+</header>
+
+<main id="main-content">
+    <section class="page-hero" data-suit="♠">
+        <div class="shell">
+            <p class="eyebrow">Your idea at the table</p>
+            <h1>Build your own Skat AI</h1>
+            <p class="page-intro">
+                JSkat is an open playground for new strategies. Build the project, learn from the existing players,
+                and bring your own approach to a real game of Skat.
+            </p>
+        </div>
+    </section>
+
+    <div class="page-content">
+        <div class="shell prose-layout">
+            <div>
+                <section class="prose-section" id="start">
+                    <p class="eyebrow">Get started</p>
+                    <h2>From repository to first change</h2>
+                    <p>
+                        You need Git and at least JDK 21. The Gradle wrapper is included in the repository, so you do
+                        not need to install Gradle separately. A Java IDE is useful, but the first build only needs a
+                        terminal.
+                    </p>
+
+                    <div class="steps">
+                        <article class="step-card">
+                            <span class="step-number">01</span>
+                            <h3>Fork and clone the repository</h3>
+                            <p>
+                                Fork <a href="https://github.com/b0n541/jskat">JSkat on GitHub</a> and clone your fork.
+                                This gives you a safe place to prepare and publish changes.
+                            </p>
+                            <code class="code-block">git clone https://github.com/YOUR-NAME/jskat.git
+cd jskat</code>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">02</span>
+                            <h3>Build the project</h3>
+                            <p>The full build checks the project. The second command creates an executable JAR file.</p>
+                            <code class="code-block">./gradlew clean build
+./gradlew fatjar</code>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">03</span>
+                            <h3>Find your way around the code</h3>
+                            <p>
+                                Game logic and AI components live in <span class="inline-code">jskat-base</span>.
+                                The JavaFX interface lives in <span class="inline-code">jskat-gui</span>, while
+                                <span class="inline-code">app</span> contains the application entry point and packaging.
+                            </p>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">04</span>
+                            <h3>Choose a player as your starting point</h3>
+                            <p>
+                                The smallest complete example is
+                                <a href="https://github.com/b0n541/jskat/blob/develop/jskat-base/src/main/java/org/jskat/ai/rnd/AIPlayerRND.java">AIPlayerRND</a>
+                                in the <span class="inline-code">org.jskat.ai.rnd</span> package. Copy its structure into
+                                your own package, such as <span class="inline-code">org.jskat.ai.myplayer</span>, and
+                                keep your class derived from
+                                <a href="https://github.com/b0n541/jskat/blob/develop/jskat-base/src/main/java/org/jskat/ai/AbstractAIPlayer.java">AbstractAIPlayer</a>.
+                                The base class provides shared game state and identifies the implementation as an AI
+                                player. Your class also needs a public no-argument constructor because JSkat creates
+                                ordinary AI players through reflection.
+                            </p>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">05</span>
+                            <h3>Implement and register the new AI player</h3>
+                            <p>
+                                JSkat asks the AI for decisions at several points during a game. The inherited
+                                <span class="inline-code">knowledge</span> value gives you access to information such as
+                                the player’s cards, seat, previous bids, current trick, declarer, and game contract.
+                            </p>
+
+                            <ol class="implementation-list">
+                                <li>
+                                    <strong>Prepare the lifecycle</strong>
+                                    Use <span class="inline-code">prepareForNewGame()</span> to reset your own state
+                                    before each game. <span class="inline-code">startGame()</span> is called once the
+                                    declarer and game contract are known.
+                                </li>
+                                <li>
+                                    <strong>Define the bidding strategy</strong>
+                                    <span class="inline-code">bidMore(int nextBidValue)</span> returns the next bid or
+                                    <span class="inline-code">0</span> to pass.
+                                    <span class="inline-code">holdBid(int currBidValue)</span> decides whether to hold
+                                    another player’s bid.
+                                </li>
+                                <li>
+                                    <strong>Handle the Skat and game announcement</strong>
+                                    <span class="inline-code">pickUpSkat()</span> decides whether to pick up the Skat.
+                                    <span class="inline-code">getCardsToDiscard()</span> must then return exactly two
+                                    cards. <span class="inline-code">announceGame()</span> returns the chosen
+                                    <span class="inline-code">GameContract</span>.
+                                </li>
+                                <li>
+                                    <strong>Play a legal card</strong>
+                                    Start with
+                                    <span class="inline-code">getPlayableCards(knowledge.getTrickCards())</span>.
+                                    Choose only from the returned list so following suit and the other game rules remain
+                                    enforced.
+                                </li>
+                                <li>
+                                    <strong>Add special cases and cleanup</strong>
+                                    Implement <span class="inline-code">playGrandHand()</span>,
+                                    <span class="inline-code">callContra()</span>, and
+                                    <span class="inline-code">callRe()</span>. Use
+                                    <span class="inline-code">finalizeGame()</span> to update statistics or perform a
+                                    learning step after the game.
+                                </li>
+                            </ol>
+
+                            <p class="implementation-label">The core of a legal card choice can look like this:</p>
+                            <code class="code-block">public final class MyAIPlayer extends AbstractAIPlayer {
+    public MyAIPlayer() {
+        // Called reflectively by JSkat.
+    }
+
+    @Override
+    public Card playCard() {
+        CardList playable =
+            getPlayableCards(knowledge.getTrickCards());
+        return chooseCard(playable);
+    }
+
+    // Implement the remaining abstract decisions
+    // following AIPlayerRND as a reference.
+}</code>
+
+                            <div class="registration-note">
+                                <strong>Make the new AI visible in the start dialog</strong>
+                                <p>
+                                    Add its fully qualified class name to
+                                    <a href="https://github.com/b0n541/jskat/blob/develop/jskat-base/src/main/java/org/jskat/player/JSkatPlayerResolver.java">JSkatPlayerResolver.getAllAIPlayerImplementations()</a>.
+                                    Then add a readable label to
+                                    <a href="https://github.com/b0n541/jskat/blob/develop/jskat-gui/src/main/kotlin/org/jskat/gui/javafx/table/SkatSeriesStartDialog.kt">SkatSeriesStartDialog.PlayerTypeCell</a>.
+                                    Add the corresponding text key to
+                                    <span class="inline-code">jskat_strings_en.properties</span> and
+                                    <span class="inline-code">jskat_strings_de.properties</span>.
+                                </p>
+                            </div>
+
+                            <p>
+                                Put tests in the matching package below
+                                <span class="inline-code">jskat-base/src/test/java/org/jskat/ai</span>. Start with small,
+                                deterministic bidding or card-selection cases and run them with
+                                <span class="inline-code">./gradlew :jskat-base:test</span>.
+                            </p>
+                        </article>
+
+                        <article class="step-card">
+                            <span class="step-number">06</span>
+                            <h3>Submit your contribution</h3>
+                            <p>
+                                Create your feature branch from <span class="inline-code">develop</span>. Open a pull
+                                request back to <span class="inline-code">develop</span> and describe the idea and
+                                behavior behind your change.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="prose-section" id="ideas">
+                    <p class="eyebrow">A good first step</p>
+                    <h2>You do not have to start with a complete AI</h2>
+                    <p>
+                        Smaller contributions move the project forward too: a reproducible bug report, an additional
+                        test case, clearer documentation, or an improvement to the JavaFX interface. Open issues show
+                        where help is currently useful.
+                    </p>
+                    <aside class="page-callout">
+                        <div>
+                            <h2>Looking for a first task?</h2>
+                            <p>Ask a question or choose a focused issue that matches your interests.</p>
+                        </div>
+                        <a class="button button-light" href="https://github.com/b0n541/jskat/issues">Browse issues</a>
+                    </aside>
+                </section>
+            </div>
+
+            <aside class="page-aside">
+                <h2>Project resources</h2>
+                <a href="https://github.com/b0n541/jskat">Repository</a>
+                <a href="https://github.com/b0n541/jskat/issues">Open issues</a>
+                <a href="https://github.com/b0n541/jskat/pulls">Pull requests</a>
+                <a href="https://github.com/b0n541/jskat/blob/develop/README.md">README</a>
+                <a href="https://github.com/b0n541/jskat/blob/develop/CODE_OF_CONDUCT.md">Code of Conduct</a>
+                <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="shell footer-inner">
+        <div>
+            <a class="brand footer-brand" href="index.html">
+                <img src="img/jskat_logo.png" alt="" width="38" height="40"><span>JSkat</span>
+            </a>
+            <p>Free Skat for curious players and contributors.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+            <a href="features.html">Features</a><a href="screenshots.html">Screenshots</a>
+            <a href="download.html">Download</a><a href="develop.html">Build an AI</a>
+            <a href="https://github.com/b0n541/jskat/issues">Issues</a>
+        </nav>
+        <p class="copyright">© 2026 JSkat</p>
+    </div>
+</footer>
+</body>
+</html>
+

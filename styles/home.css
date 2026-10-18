@@ -938,6 +938,7 @@ h3 {
 .inline-code {
     padding: 2px 6px;
     font-size: 0.9em;
+    overflow-wrap: anywhere;
 }
 
 .code-block {
@@ -971,12 +972,15 @@ h3 {
 
 .steps {
     display: grid;
+    min-width: 0;
     gap: 18px;
     margin-top: 34px;
 }
 
 .step-card {
     position: relative;
+    min-width: 0;
+    max-width: 100%;
     padding: 28px 30px 28px 84px;
     border: 1px solid var(--cream-200);
     border-radius: 16px;
